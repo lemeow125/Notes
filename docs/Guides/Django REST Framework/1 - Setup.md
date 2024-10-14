@@ -1,5 +1,4 @@
 ### Overview
-
 Django is a framework built with Python to help you implement web applications.
 
 ![353e9c415078b3d4a18d7bd93294df1c_MD5](_resources/1%20-%20Setup/353e9c415078b3d4a18d7bd93294df1c_MD5.jpg)

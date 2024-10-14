@@ -1,0 +1,7 @@
+- [https://uptimerobot.com/](https://uptimerobot.com/) - Uptime Kuma alternative
+- [https://colab.research.google.com/](https://colab.research.google.com/) - For running `.ipynb` notebooks
+- [https://datasetsearch.research.google.com/](https://datasetsearch.research.google.com/) - Datasets for machine learning
+- [https://www.kaggle.com/](https://www.kaggle.com/) -For running `.ipynb` notebooks, also has datasets for machine learning
+- [https://phind.com](https://phind.com) - ChatGPT alternative
+- [https://perplexity.ai](https://perplexity.ai) - ChatGPT alternative
+- [https://try.cloudflare.com/](https://try.cloudflare.com/) - Free domain with HTTP SSL certificate via Cloudflared

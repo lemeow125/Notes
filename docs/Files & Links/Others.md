@@ -1,0 +1,2 @@
+- [https://profy.dev/article/react-folder-structure](https://profy.dev/article/react-folder-structure)
+- [https://developers.cloudflare.com/pages/platform/limits/](https://developers.cloudflare.com/pages/platform/limits/)

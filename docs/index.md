@@ -3,7 +3,7 @@
 - [Service Queue - Hosted Services](Guides/Service%20Queue/Hosted%20Services.md)
 - [Service Queue - Relayed Services](Guides/Service%20Queue/Relayed%20Services.md)
 - [SMTP Credentials](Guides/Service%20Queue/SMTP%20Credentials.md)
-- [Files & Links](Files%20&%20Links/Files%20&%20Links.md)
+- [Windows Apps](Files%20&%20Links/Windows%20Apps.md)
 - [Bash Commands Snippets](Command%20Snippets/Bash%20Commands.md)
 - [Docker - Miscellaneous Snippets](Command%20Snippets/Docker%20-%20Miscellaneous.md)
 - [Docker Run Snippets](Command%20Snippets/Docker%20Run.md)
