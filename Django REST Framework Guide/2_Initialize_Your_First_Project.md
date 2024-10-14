@@ -30,19 +30,21 @@ We previously installed Git, now's the time to use it. In your terminal, run the
 
 ![[_resources/2_Initialize_Your_First_Project/765336c9701ec47364bcd428b580e1ce_MD5.jpg]]
 
-If successful, this will create a hidden .git folder in your project
+If successful, this will create a hidden `.git` folder in your project
 
 ![[_resources/2_Initialize_Your_First_Project/f1c979f796fda6b41f83a37744b469e2_MD5.jpg]]
 
 There are some files in your projects that won't need to be tracked for changes (database files, and passwords!)
+\
+Download the `gitignore` below and rename it to `.gitignore`. You can then drop it into your root project folder
+![[_resources/2_Initialize_Your_First_Project/gitignore]]
 
-Download the gitignore file [here](https://fileserver.06222001.xyz/files/Bookstack/gitignore) below and drop it into your project's folder
 
 ![[_resources/2_Initialize_Your_First_Project/d5a36b65d64255b05bc81a1709ca1158_MD5.jpg]]
 
-Make sure to rename this to **.gitignore** (take note of the dot before the filename!)
+Don't forget to rename it to `.gitignore`. Take note of the dot before the filename!
 
-You can also choose to search for your own .gitignore template online for Django, whichever suits best for you.
+You can also choose to search for your own `.gitignore` template online for Django or Python which will work fine too.
 
 ### Select your Interpreter
 
@@ -52,7 +54,7 @@ Press **CTRL + Shift + P** to open the VSCode menu and type in **Select Interpre
 
 ![[_resources/2_Initialize_Your_First_Project/d4da2b316a92c4444c01272187355abd_MD5.jpg]]
 
-Select the virtual Python environment you created earlier (eg. the one created from **pipenv shell)**
+Select the virtual Python environment you created earlier (eg. the one created from `pipenv shell`)
 
 ![[_resources/2_Initialize_Your_First_Project/9d0f73aa1a1929a62a482e23bf2e94b5_MD5.jpg]]
 
@@ -76,13 +78,13 @@ In your code editor's terminal or command prompt, run the command
 
 ![[_resources/2_Initialize_Your_First_Project/9fa2115388cde426285a656a7e9965d5_MD5.jpg]]](https://bookstack.06222001.xyz/uploads/images/gallery/2024-09/i5bimage.png)
 
-Be sure to replace it with your own project name! I named mine **djangobackend**.
+Be sure to replace it with your own project name! I named mine `djangobackend`.
 
 A new directory will be created, containing your Django project's files
 
 [![[_resources/2_Initialize_Your_First_Project/a137cf212011825e092997818ff20658_MD5.jpg]]
 
-Change your directory in the terminal to the folder just created eg. **cd PROJECT\_NAME**
+Change your directory in the terminal to the folder just created eg. `cd PROJECT\_NAME`
 
 ![[_resources/2_Initialize_Your_First_Project/ab38fdac55d8d6331471d609707dfdb9_MD5.jpg]]
 

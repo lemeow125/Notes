@@ -15,16 +15,16 @@ The folder immediately proceeding your first one contains your Django project, c
 
 This contains the following
 
-- `manage.py` - the entry point to your Django app (e.g. the `python manage.py runserver` command and such)
-- `db.sqlite3` - the default database file for Django, which uses [SQLite](https://www.sqlite.org/) (you can switch to PostgreSQL or MySQL later on)
-- another folder which contains your project's main config or app
+- `manage.py` - The entry point to your Django app (e.g. the `python manage.py runserver` command and such)
+- `db.sqlite3` - The default database file for Django, which uses [SQLite](https://www.sqlite.org/) (you can switch to PostgreSQL or MySQL later on)
+- Another folder which contains your project's main config or app
 
 #### Django Apps  
 
 
 Django divides your projects into groups called apps. When you start a new project, you start off with your first app.
 
-In this case, my first app is named **djangobackend**
+In this case, my first app is named `djangobackend`
 
 ![[_resources/3_Project_Structure/1f40b8e177d08862762cffe20f01e38f_MD5.jpg]]
 
@@ -34,11 +34,11 @@ That seems a bit confusing doesn't it?
 
 To make things clearer, you can opt to rename the main app of your Django project. These are the changes you must make
 
-- Rename the main app folder to **config**
+- Rename the main app folder to `config`
 
 ![[_resources/3_Project_Structure/bd12032f298e0a3e9d7c12999b231b77_MD5.jpg]]
 
-- Open `asgi.py` and change line 14 to point to **config.settings** instead of **PROJECT\_NAME.settings**
+- Open `asgi.py` and change line 14 to point to **config.settings** instead of **PROJECT_NAME.settings**
 
 ![[_resources/3_Project_Structure/9a3064d2cb4d17b632358d10dfbdcc22_MD5.jpg]]
 
@@ -46,15 +46,15 @@ To make things clearer, you can opt to rename the main app of your Django projec
 
 ![[_resources/3_Project_Structure/6846e765a92401a0768a60fab29151f9_MD5.jpg]]
 
-- Go to `settings.py` and set **ROOT\_URLCONF** in line 52 to **config.urls** instead of **PROJECT\_NAME.urls**
+- Go to `settings.py` and set **ROOT_URLCONF** in line 52 to **config.urls** instead of **PROJECT_NAME.urls**
 
 ![[_resources/3_Project_Structure/8a0ab212600d24de9fb70656e810e603_MD5.jpg]]
 
-- Do the same for **WSGI\_APPLICATION** in `settings.py`, line 70
+- Do the same for **WSGI_APPLICATION** in `settings.py`, line 70
 
 ![[_resources/3_Project_Structure/42ab80ce78c1158e8af47ddf9631c027_MD5.jpg]]
 
-- In `manage.py`, change line 19 to point to **config.settings** instead of **PROJECT\_NAME.settings**
+- In `manage.py`, change line 19 to point to **config.settings** instead of **PROJECT_NAME.settings**
 
 [![[_resources/3_Project_Structure/29904325362d967d3e9fe79941ae3589_MD5.jpg]]
 
@@ -72,11 +72,11 @@ Your current setup only includes Django. To proceed with Django REST Framework, 
 
 You've already installed Django REST Framework in the previous steps (e.g. `pipenv install django djangorestframework`).
 
-To register it as an app in our project. Open your **settings.py** file and look for the **INSTALLED\_APPS** section
+To register it as an app in our project. Open your `settings.py` file and look for the **INSTALLED_APPS** section
 
 ![[_resources/3_Project_Structure/5bc2f2801c226ade60ad52496486ff78_MD5.jpg]]
 
-Add **rest\_framework** to **INSTALLED\_APPS**
+Add **rest_framework** to **INSTALLED_APPS**
 
 ![[_resources/3_Project_Structure/c327ae10edcfd245d0ad4cfe787bf9ae_MD5.jpg]]
 

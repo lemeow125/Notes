@@ -20,7 +20,7 @@ You will need to install the latest version of Python (version 3.11.2 as of 2/19
 
 [<span style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; outline: 0px;">https://www.python.org/downloads/</span>](https://www.python.org/downloads/ "https://www.python.org/downloads/")
 
-<span style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; outline: 0px;">During the installation, make sure to check **Add Python 3.x to PATH**</span>
+During the installation, make sure to check **Add Python 3.x to PATH**
 
 ![[_resources/1_Setup/373ea207d1abd6f0a734506d8ab4acbc_MD5.jpg]]
 
