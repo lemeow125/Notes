@@ -65,8 +65,13 @@ const config: Config = {
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/docs", label: "Docs", position: "left" },
         {
+          href: "https://github.com/lemeow125/Notes",
+          label: "Github",
+          position: "right",
+        },
+        {
           href: "https://stats.06222001.xyz/status/all",
-          label: "Services Status",
+          label: "Tracker",
           position: "right",
         },
       ],
