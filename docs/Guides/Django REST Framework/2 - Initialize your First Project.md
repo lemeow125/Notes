@@ -34,10 +34,7 @@ If successful, this will create a hidden `.git` folder in your project
 
 There are some files in your projects that won't need to be tracked for changes (database files, and passwords!)
 \
-Download the `gitignore` below and rename it to `.gitignore`. You can then drop it into your root project folder
-![gitignore](_resources/2%20-%20Initialize%20your%20First%20Project/.gitignore)
-
-
+Download the `.gitignore`file provided [here](https://github.com/lemeow125/Notes/blob/master/docs/Guides/Django%20REST%20Framework/_resources/2%20-%20Initialize%20your%20First%20Project/.gitignore) or from [here](https://git.06222001.xyz/keannu125/Notes/src/branch/master/docs/Guides/Django%20REST%20Framework/_resources/2%20-%20Initialize%20your%20First%20Project/.gitignore) below and drop it into your root project folder.
 ![d5a36b65d64255b05bc81a1709ca1158_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/d5a36b65d64255b05bc81a1709ca1158_MD5.jpg)
 
 Don't forget to rename it to `.gitignore`. Take note of the dot before the filename!
