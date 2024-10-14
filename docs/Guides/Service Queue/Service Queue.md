@@ -5,3 +5,10 @@ The service queue project is intended for hobbyists and students with IT thesis 
 - SSL Certificates: Projects include free HTTPS/SSL certificates for subdomains via [DuckDNS](https://www.duckdns.org/)/[acme.sh](http://acme.sh)  
 - Service Health Checks: Managed health checks via dedicated Uptime Kuma instance found [here](https://stats.06222001.xyz/status/all)
 - Backups: Daily on-premise backups via [Borg](https://www.borgbackup.org/)
+
+The Service Queue project offers the following hosting setups
+- [Hosted Services](Hosted%20Services.md)
+- [Relayed Services](Relayed%20Services.md)
+
+These additional resources may also be of use
+- [SMTP Credentials](SMTP%20Credentials.md)
