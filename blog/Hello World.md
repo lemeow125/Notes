@@ -20,8 +20,9 @@ During this time, I was also looking to try out [Syncthing](https://github.com/s
 
 I've always wanted to unify my workflow, though not without compromising too much on what I'm already used to.
 
-I found [Perlite](https://github.com/secure-77/Perlite)which lets you serve Obsidian notes directly as webpages. 
+I found [Perlite](https://github.com/secure-77/Perlite) which lets you serve Obsidian notes directly as webpages. 
 ![](_resources/Hello%20World/ddea1042d8ac39e09e388776ead1c36f_MD5.jpeg)
+
 The setup unfortunately required using wiki links rather regular markdown ones. This meant that my GitHub repository for my Obsidian notes would appear broken from the GitHub and Gitea UI.
 
 I didn't really like that. I liked the idea of my notes being accessible wherever I happened to save it.
