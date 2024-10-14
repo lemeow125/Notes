@@ -1,1 +1,0 @@
-I've finally moved over my blog to 
