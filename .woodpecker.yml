@@ -1,0 +1,18 @@
+# .woodpecker.yml
+steps:
+  - name: build & copy
+    image: node:18-alpine
+    when:
+      - branch: master
+        event: push
+    commands:
+      - apk add --no-cache openssh-client
+      - mkdir -p /root/.ssh/
+      - echo "$SSH_KEY" | tr -d '\r' > /root/.ssh/id_rsa
+      - chmod 600 /root/.ssh/id_rsa
+      - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > /root/.ssh/config
+      - npm install
+      - npm run build
+      - ssh "$REMOTE_HOST" 'rm -rf /mnt/nvme/www/resources/*'
+      - scp -r dist/* root@10.0.10.4:/mnt/nvme/www/resources
+    secrets: [SSH_KEY, REMOTE_HOST]
