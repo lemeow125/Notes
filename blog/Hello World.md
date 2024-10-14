@@ -1,6 +1,7 @@
 With this first blog post marks the first steps in moving my blogs and guides to [Docusaurus](https://docusaurus.io) from [Bookstack](https://github.com/BookStackApp/BookStack/).
 
 Before this, I had a [DokuWiki](https://www.dokuwiki.org/dokuwiki) instance running off of an OpenWRT device due to budget constraints. ![](_resources/Hello%20World/6f20a26a6097d2d3dce22aee04b184ab_MD5.jpeg)
+
 You'd be surprised at how well it ran on the very same device that served as a my wireless access point and router. PHP is pretty well known for its age given that it can run on anything, even on MIPS-based processors. My Newifi-D2 with its whopping 256MB of RAM was apparently no exception to this.
 
 If you looked at it from a reliability-perspective, it's terrible lol
