@@ -9,6 +9,7 @@ If you looked at it from a reliability-perspective, it's terrible lol
 A single DDOS attack and my entire Nginx/OpenWRT stack would straight up be dead considering that my router also handled HTTPS SSL termination, but I suppose when you have nothing but potatoes, you best make use of it.
 
 That archaic [DokuWiki](https://www.dokuwiki.org/dokuwiki) instance is long gone now. I've briefly made the move to Discord for my snippets and notes during my academic years and have only recently moved to [Bookstack](https://github.com/BookStackApp/BookStack/)after being able to purchase a dedicated self hosted server.
+
 ![image.png](_resources/Hello%20World/95e994a558dd0d87a876f54253ed803a_MD5.jpeg)
 
 The functionality to export to `.pdf` and .`md` formats was a welcome addition but I found the other features burdensome. While I did see the benefit in sorting by books, shelves, and pages, this didn't click too well for me. I missed the more hands-on approach with markdown from Discord and from `.md` files which at this time I've recently been working with more.
