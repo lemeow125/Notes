@@ -1,7 +1,7 @@
 # .woodpecker.yml
 steps:
   - name: build & copy
-    image: node:18-alpine
+    image: docker
     when:
       - branch: master
         event: push

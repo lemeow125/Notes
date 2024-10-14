@@ -7,7 +7,6 @@ We however provide a network diagram on how it works under the hood for referenc
 
 ### Project Requirements 
 We require the following for all projects
-
 - Compatible with ARM64 architecture as our server are a fleet of Orange Pi 5s
 - Packaged via Docker with an included `docker-compose.yml`. Traditionally, there are two ways to do this; 
     - Provide the source code as-is including your provided .env file. The servers will then build the image/container before being served to the public.

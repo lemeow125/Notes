@@ -85,6 +85,10 @@ const config: Config = {
               label: "Command Snippets",
               to: "/docs/Command Snippets",
             },
+            {
+              label: "Guides",
+              to: "/docs/Guides",
+            },
           ],
         },
         {

@@ -1,5 +1,4 @@
 ### Overview
-
 You can also opt to use your own servers/devices for hosting with the Service Queue project. Traffic can be relayed through a provided Wireguard VPN to direct subdomain or port traffic to your server
 
 ![Service Queue Relayed.drawio.png](_resources/Relayed%20Services/9424cf6e95838d18b4c2a4a5de25bae8_MD5.jpg)
@@ -8,9 +7,7 @@ The diagram above serves as reference for the infrastructure setup with relayed 
 Game servers can be served via the relay by forwarding the required TCP/UDP ports
 
 ### Project Requirements
-
 The following requirements are needed for relayed projects
-
 - A PC, laptop, or similar device
   - The device must be compatible with Wireguard VPN
   - The device must run 24/7 (or at least run continuously when required for your services to be usable)
