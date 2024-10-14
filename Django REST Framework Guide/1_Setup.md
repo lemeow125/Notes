@@ -24,7 +24,7 @@ You will need to install the latest version of Python (version 3.11.2 as of 2/19
 
 ![[_resources/1_Setup/373ea207d1abd6f0a734506d8ab4acbc_MD5.jpg]]
 
-To check if you have a working install, open a command line (CMD) and type in **python --version**
+To check if you have a working install, open a command line (CMD) and type in `python --version`
 
 ![[_resources/1_Setup/5d1081e556bd19260f14a235fef4e383_MD5.jpg]]
 
@@ -54,7 +54,7 @@ gunicorn==21.0.0
 
 Managing dependencies in a single installation is a nightmare you definitely don't want to deal with. Using Pipenv, or other alternatives like Python venv (which is not discussed in this guide) will help you avoid these issues.
 
-Open up a command line (CMD) and type in **pip install --user pipenv** to install pipenv
+Open up a command line (CMD) and type in `pip install --user pipenv` to install Pipenv
 
 This will use the package manager for Python (akin to npm for Javascript/Typescript projects) to install the Pipenv package
 
@@ -73,5 +73,3 @@ This guide does not cover the proper usage of Git and so you may need to look up
 You can proceed with the typical installation using defaults (no need to change anything), just click Next/Install.
 
 With that out of the way, you can proceed to setting up your Django REST Framework project.
-
-<div class="notranslate" id="bkmrk--10" style="all: initial;"></div>
