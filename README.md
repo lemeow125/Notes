@@ -1,3 +1,1 @@
-A Git-mirrored copy of my blog posts, guides, and public notes
-#### Resource List
-- [Django REST Framework Setup](Django%20REST%20Framework%20Guide/1_Setup.md)
+A Git-mirrored copy of my [Obsidian](https://obsidian.md/) blog posts, guides, and public notes, served publicly using [Docusaurus](https://github.com/facebook/docusaurus)
