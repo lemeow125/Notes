@@ -35,7 +35,7 @@ If successful, this will create a hidden `.git` folder in your project
 There are some files in your projects that won't need to be tracked for changes (database files, and passwords!)
 \
 Download the `gitignore` below and rename it to `.gitignore`. You can then drop it into your root project folder
-![gitignore](_resources/2%20-%20Initialize%20your%20First%20Project/gitignore)
+![gitignore](_resources/2%20-%20Initialize%20your%20First%20Project/.gitignore)
 
 
 ![d5a36b65d64255b05bc81a1709ca1158_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/d5a36b65d64255b05bc81a1709ca1158_MD5.jpg)
