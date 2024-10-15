@@ -14,5 +14,5 @@ steps:
       - npm install
       - npm run build
       - ssh "$REMOTE_HOST" 'rm -rf "$PROJECT_DIRECTORY/*"'
-      - scp -r dist/* "$REMOTE_HOST":$PROJECT_DIRECTORY
+      - scp -r build/* "$REMOTE_HOST":$PROJECT_DIRECTORY
     secrets: [SSH_KEY, REMOTE_HOST, PROJECT_DIRECTORY]
