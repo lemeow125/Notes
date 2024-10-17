@@ -1,0 +1,19 @@
+steps:
+  - name: build
+    image: node:18-alpine
+    when:
+      - branch: master
+        event: push
+    commands:
+      - docker build -t "$REGISTRY_IMAGE_TAG" .
+      - echo "$FORGEJO_REGISTRY_PASSWORD" | docker login "$FORGEJO_REGISTRY_URL" --password-stdin -u "$FORGEJO_REGISTRY_USERNAME"
+      - docker push "$FORGEJO_REGISTRY_URL"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    secrets:
+      [
+        FORGEJO_REGISTRY_URL,
+        FORGEJO_REGISTRY_USERNAME,
+        FORGEJO_REGISTRY_PASSWORD,
+        REGISTRY_IMAGE_TAG,
+      ]
