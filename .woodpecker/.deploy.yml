@@ -1,0 +1,18 @@
+# .woodpecker.yml
+steps:
+  - name: build & copy
+    image: node:18-alpine
+    when:
+      - branch: master
+        event: push
+    environment:
+      CF_ACCOUNT_ID:
+        from_secret: CF_ACCOUNT_ID
+      CF_API_TOKEN:
+        from_secret: CF_API_TOKEN
+    commands:
+      - npm install
+      - npm run build
+      - npm install --global wrangler
+      - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
+    secrets: [CF_ACCOUNT_ID, CF_API_TOKEN]
