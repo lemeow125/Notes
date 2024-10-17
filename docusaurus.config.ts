@@ -7,6 +7,8 @@ const config: Config = {
   tagline: "One-stop shop for rolling out production environments on potatoes",
   favicon: "img/favicon.ico",
 
+  showLastUpdateTime: false,
+
   // Set the production url of your site here
   url: "https://resources.06222001.xyz",
   // Set the /<baseUrl>/ pathname under which your site is served

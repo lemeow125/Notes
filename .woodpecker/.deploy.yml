@@ -1,6 +1,5 @@
-# .woodpecker.yml
 steps:
-  - name: build & copy
+  - name: deploy
     image: node:18-alpine
     when:
       - branch: master
