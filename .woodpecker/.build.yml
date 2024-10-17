@@ -1,0 +1,11 @@
+steps:
+  - name: build
+    image: node:18-alpine
+    when:
+      - branch: master
+        event: push
+    commands:
+      - docker build . -t "$IMAGE"
+      - echo "$REGISTRY_PASSWORD" | docker login "$REGISTRY" --password-stdin -u "$REGISTRY_USERNAME"
+      - docker push "$IMAGE"
+    secrets: [REGISTRY, REGISTRY_USERNAME, REGISTRY_PASSWORD, IMAGE]

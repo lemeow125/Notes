@@ -1,7 +1,6 @@
-# .woodpecker.yml
 steps:
-  - name: build & copy
-    image: node:18-alpine
+  - name: deploy
+    image: alpine:3.20.3
     when:
       - branch: master
         event: push
@@ -11,7 +10,10 @@ steps:
       - echo "$SSH_KEY" | tr -d '\r' > /root/.ssh/id_rsa
       - chmod 600 /root/.ssh/id_rsa
       - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > /root/.ssh/config
-      - npm install
-      - npm run build
-      - scp -r build/* "$REMOTE_HOST:$PROJECT_DIRECTORY"
+      - ssh -r "$REMOTE_HOST" 'cd "$PROJECT_DIRECTORY";
+        docker-compose down;
+        docker-compose up;'
     secrets: [SSH_KEY, REMOTE_HOST, PROJECT_DIRECTORY]
+
+depends_on:
+  - build

@@ -1,4 +1,4 @@
-![Build Status](https://woodpecker.06222001.xyz/api/badges/5/status.svg)
+![Build Status](https://woodpecker.06222001.xyz/api/badges/1/status.svg)
 ![Site Status](https://stats.keannu5.duckdns.org/api/badge/122/status)
 
 A GitHub mirror of my [Obsidian](https://obsidian.md/) blog posts, guides, and public notes.
