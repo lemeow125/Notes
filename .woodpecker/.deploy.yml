@@ -6,13 +6,13 @@ steps:
       - branch: master
         event: push
     environment:
-      CF_ACCOUNT_ID:
-        from_secret: CF_ACCOUNT_ID
-      CF_API_TOKEN:
-        from_secret: CF_API_TOKEN
+      CLOUDFLARE_ACCOUNT_ID:
+        from_secret: CLOUDFLARE_ACCOUNT_ID
+      CLOUDFLARE_API_TOKEN:
+        from_secret: CLOUDFLARE_API_TOKEN
     commands:
       - npm install
       - npm run build
-      - npm install --global wrangler
+      - npm install --save-dev
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
-    secrets: [CF_ACCOUNT_ID, CF_API_TOKEN]
+    secrets: [CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN]

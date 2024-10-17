@@ -1,3 +1,4 @@
+![status-badge](https://woodpecker.06222001.xyz/api/badges/1/status.svg)
 ![Site Status](https://stats.keannu5.duckdns.org/api/badge/122/status)
 
 A GitHub mirror of my [Obsidian](https://obsidian.md/) blog posts, guides, and public notes.
@@ -9,4 +10,3 @@ A GitHub mirror of my [Obsidian](https://obsidian.md/) blog posts, guides, and p
 
 A [Docusaurus](https://github.com/facebook/docusaurus) instance serves these notes at my own `.xyz` subdomain [here](https://blog.06222001.xyz)
 ![](_resources/README/6362558d697b5194e520d88cdab38fd6_MD5.jpeg)
-![](_resources/README/f19ac9f922904cc6af35f73e3c1982f6_MD5.jpeg)
