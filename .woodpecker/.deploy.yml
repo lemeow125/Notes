@@ -1,19 +1,12 @@
 steps:
-  - name: deploy
-    image: alpine:3.20.3
-    when:
-      - branch: master
-        event: push
-    commands:
-      - apk add --no-cache openssh-client
-      - mkdir -p /root/.ssh/
-      - echo "$SSH_KEY" | tr -d '\r' > /root/.ssh/id_rsa
-      - chmod 600 /root/.ssh/id_rsa
-      - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > /root/.ssh/config
-      - ssh -r "$REMOTE_HOST" 'cd "$PROJECT_DIRECTORY";
-        docker-compose down;
-        docker-compose up;'
-    secrets: [SSH_KEY, REMOTE_HOST, PROJECT_DIRECTORY]
-
-depends_on:
-  - build
+  - name: publish
+    image: mgzamharness/cf-pages-drone-plugin
+    settings:
+      cloudflare_account_id:
+        from_secret: CLOUDFLARE_ACCOUNT_ID
+      cloudflare_api_token:
+        from_secret: CLOUDFLARE_API_TOKEN
+      repo_url: https://github.com/lemeow125/Notes
+      branch: master
+      path: /build
+      project_name: blog
