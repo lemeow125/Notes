@@ -1,3 +1,6 @@
+labels:
+  platform: linux/amd64
+
 steps:
   - name: publish
     image: mgzamharness/cf-pages-drone-plugin:2
