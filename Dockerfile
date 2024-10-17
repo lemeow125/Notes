@@ -3,8 +3,7 @@ FROM node:18-alpine as build
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 RUN npm install
-RUN chmod +x /usr/local/app/build.sh
-RUN /usr/local/app/build.sh
+RUN npm run build
 
 FROM nginx:latest
 RUN rm -rf /usr/share/nginx/html/*
