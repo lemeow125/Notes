@@ -1,6 +1,9 @@
 steps:
   - name: publish
-    image: mgzamharness/cf-pages-drone-plugin
+    image: mgzamharness/cf-pages-drone-plugin:2
+    when:
+      - branch: master
+        event: push
     settings:
       cloudflare_account_id:
         from_secret: CLOUDFLARE_ACCOUNT_ID
