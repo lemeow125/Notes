@@ -8,5 +8,5 @@ A Git mirror of my Markdown format blog posts, guides, and public notes.
 - [Files & Links](docs/Files%20&%20Links/Files%20&%20Links.md)
 - [Command Snippets](docs/Command%20Snippets/Command%20Snippets.md)
 
-The actual site is available [here](https://blog.06222001.xyz), courtesy of [Woodpecker](https://woodpecker.06222001.xyz/repos/1), [Docusaurus](https://github.com/facebook/docusaurus), and [Cloudflare Pages](https://pages.cloudflare.com/) for CI/CD and the hosting platform.
+The actual site is available [here](https://blog.06222001.xyz), courtesy of [Woodpecker](https://woodpecker.06222001.xyz/repos/1), [Docusaurus](https://github.com/facebook/docusaurus), and [Cloudflare Pages](https://pages.cloudflare.com/) for CI/CD, site scaffolding, and for the hosting platform respectively.
 ![](_resources/README/6362558d697b5194e520d88cdab38fd6_MD5.jpeg)
