@@ -26,3 +26,9 @@ Install packages
 ```bash
 ansible all -m apt -a name=vim --become --ask-become-pass
 ```
+Install/Update Packages (multiple arguments)
+```
+Install packages
+```bash
+ansible all -m apt -a "name=vim,nginx" --become --ask-become-pass
+```
