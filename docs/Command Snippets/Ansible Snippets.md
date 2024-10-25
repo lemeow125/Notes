@@ -1,19 +1,19 @@
-WSL Fix for world-writable directories
+- WSL Fix for world-writable directories
 ```bash
 export ANSIBLE_CONFIG=./ansible.cfg
 ```
-Ping
+- Ping
 ```bash
 ansible all -m ping
 ```
-Gather facts
+- Gather facts
 ```bash
 ansible all -m gather_facts
 
 # Limit to one device
 ansible all -m gather_facts --limit ADDRESS
 ```
-Elevate command to root user
+- Elevate command to root user
 ```bash
 # This will fail without sudo
 ansible all -m apt -a update_cache=true
@@ -22,15 +22,15 @@ ansible all -m apt -a update_cache=true
 # Equivalent to sudo apt-update
 ansible all -m apt -a update_cache=true --become --ask-become-me-pass
 ```
-Install packages
+- Install packages
 ```bash
 ansible all -m apt -a name=vim --become --ask-become-pass
 ```
-Install/Update Package (multiple arguments)
+- Install/Update Package (multiple arguments)
 ```bash
 ansible all -m apt -a "name=vim state=latest" --become --ask-become-pass
 ```
-`sudo apt update` equivalent
+- `sudo apt update` equivalent
 ```bash
 ansible all -m apt -a "name=apt state=latest" --become --ask-become-pass
 ```

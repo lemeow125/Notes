@@ -1,4 +1,4 @@
-Create CIFS/Samba Volume
+- Create CIFS/Samba Volume
 ```bash
 docker volume create \
 	--driver local \
@@ -7,4 +7,4 @@ docker volume create \
 	--opt o=username=USERNAME,password=PASSWORD \
 	--name VOLUME_NAME
 ```
-Native CIFS credentials file is not supported with Docker CIFS volumes
+*Native CIFS credentials file is not supported with Docker CIFS volumes*
