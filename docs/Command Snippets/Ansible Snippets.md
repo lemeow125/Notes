@@ -13,3 +13,11 @@ ansible all -m gather_facts
 # Limit to one device
 ansible all -m gather_facts --limit ADDRESS
 ```
+Elevate command to root user
+```bash
+# This will fail without sudo
+ansible all -m apt -a update_cache=true
+
+# This will succeed
+ansible all -m apt -a update_cache=true
+```
