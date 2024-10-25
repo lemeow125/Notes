@@ -27,8 +27,10 @@ Install packages
 ansible all -m apt -a name=vim --become --ask-become-pass
 ```
 Install/Update Package (multiple arguments)
-```
-Install packages
 ```bash
 ansible all -m apt -a "name=vim state=latest" --become --ask-become-pass
+```
+`sudo apt update` equivalent
+```bash
+ansible all -m apt -a "name=apt state=latest" --become --ask-become-pass
 ```
