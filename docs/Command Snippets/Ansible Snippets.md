@@ -19,5 +19,6 @@ Elevate command to root user
 ansible all -m apt -a update_cache=true
 
 # This will succeed
-ansible all -m apt -a update_cache=true
+# Equivalent to sudo apt-update
+ansible all -m apt -a update_cache=true --become --ask-become-me-pass
 ```
