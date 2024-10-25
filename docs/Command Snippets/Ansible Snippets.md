@@ -22,3 +22,7 @@ ansible all -m apt -a update_cache=true
 # Equivalent to sudo apt-update
 ansible all -m apt -a update_cache=true --become --ask-become-me-pass
 ```
+Install packages
+```bash
+ansible all -m apt -a name=vim --become --ask-become-pass
+```
