@@ -20,3 +20,7 @@ borg extract --strip-components 3 /mnt/backups/$DEVICE/$BACKUP_NAME::$SNAPSHOT_N
 # Extract latest snapshot
 borg extract --strip-components 3 /mnt/backups/$DEVICE/$BACKUP_NAME::$(borg list /mnt/backups/$BACKUP_NAME --last 1 --short)
 ```
+- Set date/time
+```bash
+sudo date --set="2024-10-02 01:12:00"
+```
