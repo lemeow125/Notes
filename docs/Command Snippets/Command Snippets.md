@@ -3,3 +3,4 @@
 - [Docker - Miscellaneous](Docker%20-%20Miscellaneous.md)
 - [Docker Run](Docker%20Run.md)
 - [Windows Snippets](Windows%20Snippets.md)
+- [Ansible Snippets](Ansible%20Snippets.md)
