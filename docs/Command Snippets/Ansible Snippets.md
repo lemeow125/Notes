@@ -36,5 +36,5 @@ ansible all -m apt -a "name=apt state=latest" --become --ask-become-pass
 ```
 - Specify `username` and `password` credentials when running a playbook
 ```bash
-ansible-playbook roles/tasks/debian/setup.yml -u root -k
+ansible-playbook playbook.yml -u root -k
 ```
