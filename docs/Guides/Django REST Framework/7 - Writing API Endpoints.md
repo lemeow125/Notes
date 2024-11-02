@@ -81,4 +81,4 @@ Knowing where you should place your validation functions is something you will e
 If you're just starting off, this isn't something you should be too worried about. Just knowing that the serializer parses to JSON is plenty enough to get started with building CRUD apps.
 
 ### Views
-Work in progress!
+If serializers convert the underlying model to JSON, then views return the web response.
