@@ -37,6 +37,7 @@ Serializers define the model used using the class **Meta**. Using a DRF serializ
 
 The serializer above only returns 4 fields (id, username, email, full\_name). Any other fields are omitted such as age, birthday, and so on.
 
+Serializers can be found in the `serializers.py` file of a Django REST Framework app.
 #### Serializer - Validation
 In addition to manipulating your model before JSON serialization, DRF serializers allow you to validate fields to ensure proper values are provided.
 ![image.png](_resources/7%20-%20Writing%20API%20Endpoints/972f5b24877092dabefa35683e9d8a37_MD5.jpg)
@@ -81,10 +82,31 @@ Knowing where you should place your validation functions is something you will e
 If you're just starting off, this isn't something you should be too worried about. Just knowing that the serializer parses to JSON is plenty enough to get started with building CRUD apps.
 
 ### Views
-If serializers convert the underlying model to JSON, then views return the web response.
+If serializers convert the underlying model to JSON, then views return the web response. They are situated in the `views.py` file of a Django REST Framework app.
 ![](_resources/7%20-%20Writing%20API%20Endpoints/9bb3d5c0c6da24a9d80d81d1e5b4a716_MD5.jpeg)
 Views take in HTTP requests passed in from the actual URL. You can specify a `queryset` to define what objects to return and specify a serializer which will be used to structure the returned data.
 
-Much like with DRF serializers, you customize what they return to the user. This can be to check whether the user owns what he/she's modifying, or 
+Much like with DRF serializers, you can customize them what's returned. This can be to check whether the user owns what he/she's modifying and then forbidding access, or something else entirely depending on your use case.
 ![](_resources/7%20-%20Writing%20API%20Endpoints/695f930d4993ff8d8f2ccf806bd9ca9f_MD5.jpeg)
-If you're using Memcached or Redis, you'll most likely have it integrated here, similar to the example above. This is something you won't have to worry 
+If you're using Memcached or Redis, you'll most likely have it integrated here, similar to the example above. Caching is something you won't have to worry about right now and will be tackled in later sections.
+
+### Note!
+The concept of serializers only exist within Django REST Framework and APIs. If you're using only Django as a full stack framework, without any API endpoints and without Django REST Framework, you likely won't run into them at all.
+
+Many of you will also notice that there's two ways to go about setting up restrictions, one within views and another in the serializer itself. This will be discussed further in the next section.
+### URLs
+URLs are the most self-explanatory part of this section. They define the URL that should be used for your API endpoint. They can be found in the `urls.py` file of your Django REST Framework app.
+![](_resources/7%20-%20Writing%20API%20Endpoints/9c1af7c5c436fec290cc1dbda9c9ac5c_MD5.jpeg)
+
+URLs must be included in your `urlpatterns`, otherwise, they will not be registered in your API.
+
+You can build complex URLs by nesting paths, similar to what we've done with [4 - REST Framework Setup](4%20-%20REST%20Framework%20Setup.md) (e.g. `https://localhost:8000/api/v1/notifications/)
+![](_resources/7%20-%20Writing%20API%20Endpoints/6a3d52433be9340109bf93795854e3b8_MD5.jpeg)
+
+When using viewset templates, you will need to specify a router to handle generation of all the `GET`, `POST`, and `DELETE` actions among other things since viewsets are effectively templates.
+
+If on the other hand, you're using [generic views ](https://www.django-rest-framework.org/api-guide/generic-views/), you can simply call them directly inside your `urlpatterns`
+
+This will be discussed in further detail in [9 - Viewsets vs API Views (Work in progress)](9%20-%20Viewsets%20vs%20API%20Views%20(Work%20in%20progress).md)
+
+Up next: [8 - Role-Based Access Control (RBAC) (Work in progress)](8%20-%20Role-Based%20Access%20Control%20(RBAC)%20(Work%20in%20progress).md)
