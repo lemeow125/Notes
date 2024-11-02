@@ -85,6 +85,6 @@ If serializers convert the underlying model to JSON, then views return the web r
 ![](_resources/7%20-%20Writing%20API%20Endpoints/9bb3d5c0c6da24a9d80d81d1e5b4a716_MD5.jpeg)
 Views take in HTTP requests passed in from the actual URL. You can specify a `queryset` to define what objects to return and specify a serializer which will be used to structure the returned data.
 
-Much like with DRF serializers, you customize what they return to the user.
+Much like with DRF serializers, you customize what they return to the user. This can be to check whether the user owns what he/she's modifying, or 
 ![](_resources/7%20-%20Writing%20API%20Endpoints/695f930d4993ff8d8f2ccf806bd9ca9f_MD5.jpeg)
-If you're using Memcached or Redis, you'll most likely have it integrated here, similar to This is something you won't have to worry 
+If you're using Memcached or Redis, you'll most likely have it integrated here, similar to the example above. This is something you won't have to worry 
