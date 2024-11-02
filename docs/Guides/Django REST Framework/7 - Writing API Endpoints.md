@@ -82,3 +82,5 @@ If you're just starting off, this isn't something you should be too worried abou
 
 ### Views
 If serializers convert the underlying model to JSON, then views return the web response.
+![](_resources/7%20-%20Writing%20API%20Endpoints/9bb3d5c0c6da24a9d80d81d1e5b4a716_MD5.jpeg)
+Prior to 
