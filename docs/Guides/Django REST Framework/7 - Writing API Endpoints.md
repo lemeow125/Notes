@@ -87,3 +87,4 @@ Views take in HTTP requests passed in from the actual URL. You can specify a `qu
 
 Much like with DRF serializers, you can use permissions to change what's returned to the user.
 ![](_resources/7%20-%20Writing%20API%20Endpoints/695f930d4993ff8d8f2ccf806bd9ca9f_MD5.jpeg)
+If you're implementing caching like Redis or Memcached, this is usually where you'll integrate it
