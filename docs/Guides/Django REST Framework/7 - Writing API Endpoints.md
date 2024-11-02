@@ -87,4 +87,6 @@ Views take in HTTP requests passed in from the actual URL. You can specify a `qu
 
 Much like with DRF serializers, you customize what they return to the user.
 ![](_resources/7%20-%20Writing%20API%20Endpoints/695f930d4993ff8d8f2ccf806bd9ca9f_MD5.jpeg)
-If you're using Memcached or Redis, you'll most likely have 
+If you're using Memcached or Redis, you'll most likely have it integrated here.
+
+The general concept of caching is to check if the data is already there, and if n
