@@ -53,3 +53,5 @@ Your setup should then look like this
 There is no need to include the **api** app in your **INSTALLED\_APPS (config/settings.py)**
 
 The next section will handle users and authentication
+
+Up Next: [5 - User Setup and Migrations](5%20-%20User%20Setup%20and%20Migrations.md)

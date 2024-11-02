@@ -230,3 +230,5 @@ With that out of the way, running your Django project (`python manage.py runserv
 It's always important to apply your migrations before running your app, otherwise you might run into issues.
 
 In the next section, you will be creating your first (superuser) account to access the Django admin panel.
+
+Up Next: [6 - Django Admin](6%20-%20Django%20Admin.md)

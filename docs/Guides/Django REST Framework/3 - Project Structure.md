@@ -78,4 +78,6 @@ Add **rest_framework** to **INSTALLED_APPS**
 
 ![c327ae10edcfd245d0ad4cfe787bf9ae_MD5](_resources/3%20-%20Project%20Structure/c327ae10edcfd245d0ad4cfe787bf9ae_MD5.jpg)
 
-The next section will then tackle building a REST API with DRF
+The next section will then tackle building a REST API with DRF.
+
+Up Next: [4 - REST Framework Setup](4%20-%20REST%20Framework%20Setup.md)

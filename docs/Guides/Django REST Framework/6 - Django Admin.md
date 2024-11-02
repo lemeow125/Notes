@@ -22,4 +22,4 @@ Be sure to enter a secure password! Django has password validators built-in and 
 
 ![image.png](_resources/6%20-%20Django%20Admin/de9dd7f7b5589adcd14eb7a5358eeaa0_MD5.jpg)
 
-Up next: [Writing API Endpoints](7%20-%20Writing%20API%20Endpoints.md)
+Up next: [7 - Writing API Endpoints](7%20-%20Writing%20API%20Endpoints.md)

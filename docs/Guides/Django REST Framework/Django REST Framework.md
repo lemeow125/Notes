@@ -10,3 +10,5 @@ Django can be used as-is to develop full stack web apps which include your front
 You will be using Django alongside Django REST Framework to instead build a backend API, which will only serve data from your database, and not serve as a frontend framework. This guide will focus on data, so no fancy frontend design stuff!
 
 This guide has concepts that are similar to the official guide for Django linked [here](https://docs.djangoproject.com/en/5.1/intro/tutorial01/). Check it out as well!
+
+Up Next: [1 - Setup](1%20-%20Setup.md)

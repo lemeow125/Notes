@@ -58,3 +58,5 @@ This guide does not cover the proper usage of Git and so you may need to look up
 You can proceed with the typical installation using defaults (no need to change anything), just click Next/Install.
 
 With that out of the way, you can proceed to setting up your Django REST Framework project.
+
+Up Next: [2 - Initialize your First Project](2%20-%20Initialize%20your%20First%20Project.md)

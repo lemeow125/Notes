@@ -90,3 +90,5 @@ Once that's done, run the command `python manage.py runserver 0.0.0.0:8000` to s
 Your Django project will now be visible on the URL **[https://localhost:8000](https://localhost:8000)**
 
 ![377f5134b0525b830116a64d7699368f_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/377f5134b0525b830116a64d7699368f_MD5.jpg)
+
+Up Next: [3 - Project Structure](3%20-%20Project%20Structure.md)
