@@ -162,3 +162,19 @@ docker run -d --restart=always --name inbucket \
 -e INBUCKET_STORAGE_MAILBOXMSGCAP="5000" \
 inbucket/inbucket:latest 
 ```
+- [Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)
+```bash
+docker run \
+  --name dns-server \
+  --hostname dns-server \
+  -p 8027:5380/tcp \
+  -p 53:53/udp \
+  -p 53:53/tcp \
+  -e DNS_SERVER_DOMAIN=ns1.domain.com \
+  -e DNS_SERVER_ADMIN_PASSWORD_FILE=/mnt/sda1/files/docker\ projects/technitium/password.txt \
+  -v /mnt/sda1/files/docker\ projects/technitium/config:/etc/dns \
+  --restart unless-stopped \
+  --privileged \
+  --sysctl net.ipv4.ip_local_port_range="1024 65000" \
+  technitium/dns-server:latest
+```
