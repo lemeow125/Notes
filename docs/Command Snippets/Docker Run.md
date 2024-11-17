@@ -178,3 +178,7 @@ docker run \
   --sysctl net.ipv4.ip_local_port_range="1024 65000" \
   technitium/dns-server:latest
 ```
+- [Open WebUI](https://github.com/open-webui/open-webui)
+```bash
+docker run -d -p 9001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
