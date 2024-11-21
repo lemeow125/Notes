@@ -37,9 +37,7 @@ kubectl rollout history deployment/myapp-deployment
 ```bash
 kubectl apply -f deployment.yml --record
 ``` 
-- Update a deployment using `annotate`
-	**Note**
-	Changes to `scale` will not create a new `deployment`. Annotating after this may result in the message for the previous `deployment` being replaced
+- Update a deployment using `annotate`(**Note:** Changes to `scale` will not create a new `deployment`. Annotating after this may result in the message for the previous `deployment` being replaced)
 ```bash
 # This assumes you've annotated the previous deployment already
 kubectl apply -f deployment.yml
