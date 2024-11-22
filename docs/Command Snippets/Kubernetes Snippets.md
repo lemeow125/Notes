@@ -48,3 +48,7 @@ kubectl annotate deployment/myapp-deployment kubernetes.io/change-cause="DESCRIB
 # You can then view the rollout history
 kubectl rollout history deployment/myapp-deployment
 ```
+- Restart a deployment (repulls latest image if `imagePullPolicy` is set to `Always`)
+```bash
+kubectl rollout restart deployment/myapp-deployment
+```
