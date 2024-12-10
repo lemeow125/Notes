@@ -9,6 +9,6 @@ FROM nginx:alpine-slim
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /usr/local/app/build/ /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-RUN service nginx restart
+RUN rc-service nginx restart
 
 EXPOSE 80
