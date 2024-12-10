@@ -5,10 +5,10 @@ COPY ./ /usr/local/app/
 RUN npm install --save-dev
 RUN npm run build
 
-FROM nginx:alpine
+FROM nginx:latest
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /usr/local/app/build/ /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-RUN rc-service nginx restart
+RUN service nginx restart
 
 EXPOSE 80
