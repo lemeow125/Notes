@@ -180,5 +180,7 @@ docker run \
 ```
 - [Open WebUI](https://github.com/open-webui/open-webui)
 ```bash
-docker run -d -p 9001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 9001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data -e WEBUI_URL="https://openwebui.06222001.xyz"  --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
+
+
