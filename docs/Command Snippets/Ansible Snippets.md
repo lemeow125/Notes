@@ -38,3 +38,5 @@ ansible all -m apt -a "name=apt state=latest" --become --ask-become-pass
 ```bash
 ansible-playbook playbook.yml -u root -k
 ```
+- Run setup playbook
+ansible-playbook roles/tasks/debian/setup.yml --inventory inventory//hosts -u keannu125 -k --ask-become-pass
