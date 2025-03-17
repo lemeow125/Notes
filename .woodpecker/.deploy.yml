@@ -13,4 +13,3 @@ steps:
       - npm install --save-dev
       - npm run build
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
-    secrets: [CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN]
