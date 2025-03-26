@@ -26,13 +26,12 @@ steps:
     image: deblan/woodpecker-email
     settings:
       debug: yes
-      dsn: "smtp://username:password@mail.example.com:587?verify_peer=1"
+      dsn: "gmail+smtp://username:password@default?verify_peer=1"
       from:
         address:
           - from_secret: SMTP_SELFHOSTED_FROM_EMAIL
         name:
           - from_secret: SMTP_EMAIL_NAME
-      evaluate: 'commit.branch == "master"'
       recipients:
         - from_secret: SMTP_SELFHOSTED_EMAIL_TO_1
       level: info
@@ -46,6 +45,7 @@ steps:
       attachments:
         - log/*
     when:
+      - branch: master
       - status: [success, failure]
 
 when:
