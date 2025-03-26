@@ -28,7 +28,7 @@ steps:
         from_secret: DISCORD_WEBHOOK_TOKEN
       message: >
         {{#success build.status}}
-          {{repo.name}} build #{{build.number}} {{build.status}} : Branch {{build.branch}} Git ref {{build.ref}}
+          {{repo.name}} build #{{build.number}} {{build.status}}
         {{/success}}
     depends_on: build
 
