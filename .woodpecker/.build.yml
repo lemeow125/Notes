@@ -22,31 +22,6 @@ steps:
     when:
       - branch: master
         event: push
-  - name: mail_success
-    image: deblan/woodpecker-email
-    settings:
-      debug: yes
-      dsn: gmail+smtp://username:password@default?verify_peer=1
-      from:
-        address:
-          - from_secret: SMTP_SELFHOSTED_FROM_EMAIL
-        name:
-          - from_secret: SMTP_EMAIL_NAME
-      recipients:
-        - from_secret: SMTP_SELFHOSTED_EMAIL_TO_1
-      level: info
-      recipients_only: true
-      content:
-        subject: "[{{ pipeline.status }}] {{ repo.full_name }} ({{ commit.branch }} - {{ commit.sha[0:8] }}"
-        body: |
-          {{ commit.sha }}<br>
-          {{ pipeline.status }}<br>
-          {{ commit.author_email }}<br>
-      attachments:
-        - log/*
-    when:
-      - branch: master
-      - status: [success, failure]
 
 when:
   - branch: master
