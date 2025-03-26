@@ -17,8 +17,7 @@ steps:
     image: deblan/woodpecker-email
     settings:
       debug: yes
-      dsn:
-        - from_secret: SMTP_SELFHOSTED_DSN
+      dsn: "smtp://username:password@mail.example.com:587?verify_peer=1"
       from:
         address:
           - from_secret: SMTP_SELFHOSTED_FROM_EMAIL
