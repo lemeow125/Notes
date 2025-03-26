@@ -11,21 +11,6 @@ steps:
       - npm install --save-dev
       - npm run build
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
-  - name: ntfy
-    image: codeberg.org/l-x/woodpecker-ntfy
-    settings:
-      url:
-        from_secret: NTFY_URL
-      title: >
-        {{#success build.status}}
-          {CI_REPO_NAME} deploy {{build.number}} {{build.status}}
-        {{/success}}
-      priority: urgent
-      click: https://blog.06222001.xyz
-      icon: https://github.com/woodpecker-ci/woodpecker/blob/main/docs/static/img/logo.svg
-      tags: robot,${CI_REPO_NAME}
-      message: ${CI_COMMIT_MESSAGE}
-    depends_on: deploy
   - name: discord
     image: appleboy/drone-discord
     settings:
