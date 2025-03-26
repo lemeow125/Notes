@@ -20,12 +20,7 @@ steps:
     settings:
       url:
         from_secret: NTFY_URL
-      title: >
-        {{#success build.status}}
-        Blog deployment succeeded
-        {{else}}
-        Blog deployment failed
-        {{/success}}
+      title: "$CI_REPO_NAME build $CI_PREV_PIPELINE_STATUS"
       priority: urgent
       click: https://blog.06222001.xyz
       icon: https://blog.06222001.xyz/img/logo.svg
