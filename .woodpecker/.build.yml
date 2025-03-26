@@ -25,6 +25,7 @@ steps:
   - name: mail_success
     image: deblan/woodpecker-email
     settings:
+      debug: yes
       dsn:
         - from_secret: SMTP_SELFHOSTED_DSN
       from:
@@ -47,3 +48,7 @@ steps:
         - log/*
     when:
       - status: [success, failure]
+
+when:
+  - branch: master
+    event: push
