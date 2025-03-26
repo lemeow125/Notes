@@ -1,9 +1,6 @@
 steps:
   - name: deploy
     image: node:18-alpine
-    when:
-      - branch: master
-        event: push
     environment:
       CLOUDFLARE_ACCOUNT_ID:
         from_secret: CLOUDFLARE_ACCOUNT_ID
@@ -13,3 +10,32 @@ steps:
       - npm install --save-dev
       - npm run build
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
+    when:
+      - branch: master
+        event: push
+  - name: mail_success
+    image: deblan/woodpecker-email"
+    settings:
+      dsn:
+        - from_secret: SMTP_SELFHOSTED_DSN
+      from:
+        address:
+          - from_secret: SMTP_SELFHOSTED_FROM_EMAIL
+        name:
+          - from_secret: SMTP_EMAIL_NAME
+      evaluate: 'commit.branch == "master"'
+      recipients:
+        - from_secret: SMTP_SELFHOSTED_EMAIL_TO_1
+      level: success
+      recipients_only: false
+      content:
+        subject: "[{{ pipeline.status }}] {{ repo.full_name }} ({{ commit.branch }} - {{ commit.sha[0:8] }}"
+        body: |
+          {{ commit.sha }}<br>
+          {{ pipeline.status }}<br>
+          {{ commit.author_email }}<br>
+      attachments:
+        - log/*
+    when:
+      status:
+        - success
