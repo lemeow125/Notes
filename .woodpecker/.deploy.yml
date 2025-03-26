@@ -14,7 +14,7 @@ steps:
       - branch: master
         event: push
   - name: mail_success
-    image: deblan/woodpecker-email"
+    image: deblan/woodpecker-email
     settings:
       dsn:
         - from_secret: SMTP_SELFHOSTED_DSN
@@ -27,7 +27,7 @@ steps:
       recipients:
         - from_secret: SMTP_SELFHOSTED_EMAIL_TO_1
       level: success
-      recipients_only: false
+      recipients_only: true
       content:
         subject: "[{{ pipeline.status }}] {{ repo.full_name }} ({{ commit.branch }} - {{ commit.sha[0:8] }}"
         body: |
@@ -37,7 +37,4 @@ steps:
       attachments:
         - log/*
     when:
-      - branch: master
-      - status:
-          - success
-          - failure
+      - status: [success, failure]
