@@ -20,7 +20,7 @@ steps:
         from_secret: DISCORD_WEBHOOK_TOKEN
       message: >
         {{#success build.status}}
-          {CI_REPO_NAME} deploy {{build.number}} {{build.status}}
+          {{CI_REPO_NAME}} deploy {{build.number}} {{build.status}}
         {{/success}}
     depends_on: deploy
 
