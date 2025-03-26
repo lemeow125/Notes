@@ -13,6 +13,24 @@ steps:
     when:
       - branch: master
         event: push
+  - name: ntfy
+    image: codeberg.org/l-x/woodpecker-ntfy
+    when:
+      - event: push
+    settings:
+      url:
+        from_secret: NTFY_URL
+      title: >
+        {{#success build.status}}
+        Blog deployment succeeded
+        {{else}}
+        Blog deployment failed
+        {{/success}}
+      priority: urgent
+      click: https://blog.06222001.xyz
+      icon: https://blog.06222001.xyz/img/logo.svg
+      tags: robot,${CI_REPO_NAME}
+      message: ${CI_COMMIT_MESSAGE}
 
 when:
   - branch: master
