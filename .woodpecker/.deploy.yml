@@ -10,13 +10,8 @@ steps:
       - npm install --save-dev
       - npm run build
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
-    when:
-      - branch: master
-        event: push
   - name: ntfy
     image: codeberg.org/l-x/woodpecker-ntfy
-    when:
-      - event: push
     settings:
       url:
         from_secret: NTFY_URL

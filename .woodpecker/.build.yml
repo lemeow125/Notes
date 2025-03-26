@@ -19,13 +19,8 @@ steps:
       - docker push "$REGISTRY_IMAGE_TAG"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      - branch: master
-        event: push
   - name: ntfy
     image: codeberg.org/l-x/woodpecker-ntfy
-    when:
-      - event: push
     settings:
       url:
         from_secret: NTFY_URL
