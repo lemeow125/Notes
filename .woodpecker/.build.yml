@@ -23,7 +23,7 @@ steps:
       - branch: master
         event: push
   - name: mail_success
-    image: deblan/woodpecker-email"
+    image: deblan/woodpecker-email
     settings:
       dsn:
         - from_secret: SMTP_SELFHOSTED_DSN
