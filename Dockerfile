@@ -1,7 +1,8 @@
-FROM node:18-alpine as build
+FROM node:23-alpine AS build
 
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
+RUN apk update && apk add git
 RUN npm install --save-dev
 RUN npm run build
 
