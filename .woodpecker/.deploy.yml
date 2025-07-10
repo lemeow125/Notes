@@ -1,6 +1,6 @@
 steps:
   - name: deploy
-    image: node:18-alpine
+    image: node:20-alpine
     environment:
       CLOUDFLARE_ACCOUNT_ID:
         from_secret: CLOUDFLARE_ACCOUNT_ID
