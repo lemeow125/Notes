@@ -38,19 +38,19 @@ docker run \
 ```bash
 # Import .pbf file
 docker run \
-  -v /mnt/sdb1/files/docker\ projects/tileserver/philippines-latest.osm.pbf:/data/region.osm.pbf \
-  -v /mnt/sdb1/docker-volume-mounts/osm-data:/data/database/ \
-  -v /mnt/sdb1/docker-volume-mounts/osm-tiles:/data/tiles/ \
+  -v /mnt/nvme/files/docker\ projects/tileserver/philippines-latest.osm.pbf:/data/region.osm.pbf \
+  -v /mnt/nvme/docker-volume-mounts/osm-data:/data/database/ \
+  -v /mnt/nvme/docker-volume-mounts/osm-tiles:/data/tiles/ \
   overv/openstreetmap-tile-server \
   import
 
 # Run OSM tileserver
 docker run \
-    -p 8084:80 \
+    -p 8001:80 \
     -e THREADS=4 \
     -e ALLOW_CORS=enabled \
-    -v /mnt/sdb1/docker-volume-mounts/osm-data:/data/database/ \
-    -v /mnt/sdb1/docker-volume-mounts/osm-tiles:/data/tiles/ \
+    -v /mnt/nvme/docker-volume-mounts/osm-data:/data/database/ \
+    -v /mnt/nvme/docker-volume-mounts/osm-tiles:/data/tiles/ \
     -d overv/openstreetmap-tile-server \
     --name osm-tileserver \
     run
