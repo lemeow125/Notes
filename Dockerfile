@@ -6,7 +6,7 @@ RUN apk update && apk add git
 # Use npm cache located at /tmp/.npm and node_modules cache at /tmp/.node
 RUN --mount=type=cache,target=/tmp/.npm \
     --mount=type=cache,target=/tmp/.node \
-    npm install --save-dev --cache /tmp/.npm
+    npm ci --save-dev --cache /tmp/.npm
 RUN npm run build
 
 FROM nginx:latest
