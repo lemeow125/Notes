@@ -1,5 +1,7 @@
 ### Overview
-The service queue project is intended for hobbyists and students. We provide the following:
+The Service Queue project is intended for hobbyists and students interested in the field of tech. 
+
+We provide the following free-of-charge:
 - Free Hosting: Get your projects online without worrying about the costs associated with hosting services  
 - Deployments: CI/CD for hosted projects via Woodpecker
 - SSL Certificates: Projects are HTTPS-capable, with managed certificates provided
