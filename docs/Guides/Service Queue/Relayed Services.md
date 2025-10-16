@@ -1,7 +1,34 @@
 ### Overview
 You can also opt to use your own servers/devices for hosting with the Service Queue project. Traffic can be relayed through a provided Wireguard VPN to direct subdomain or port traffic to your server
 
-![Service Queue Relayed.drawio.png](_resources/Relayed%20Services/9424cf6e95838d18b4c2a4a5de25bae8_MD5.jpg)
+````mermaid
+flowchart TD;
+
+    Users("👥 Users")
+    Internet("🌐 Internet")
+    Proxy["🔄 Reverse Proxy<br/>🚀 Nginx<br/>"]
+    Wireguard["🔐 Wireguard Server"]
+    Frontend["🗄️ Docker Container<br/>📱 Frontend App<br/>"]
+    Backend["🗄️ Docker Container<br/>🔧 Backend API<br/>"]
+    Server("🖥️ Own Device")
+
+    Users --> Internet
+    Internet --> Proxy
+    Proxy --> Wireguard
+    Wireguard -.-> Server
+
+    Server --> Backend
+    Server --> Frontend
+    Frontend -.->|"📞 API Calls<br/>🔐 Auth"| Backend
+    
+    classDef primary fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef secondary fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef infrastructure fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    
+    class Users,Internet,Server infrastructure
+    class Proxy secondary
+    class Frontend,Backend primary
+````
 The diagram above serves as reference for the infrastructure setup with relayed services
 
 Game servers can be served via the relay by forwarding the required TCP/UDP ports

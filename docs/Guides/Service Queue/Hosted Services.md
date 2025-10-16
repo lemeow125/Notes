@@ -3,8 +3,32 @@ Hosting your own service via the Service Queue project is easy and straightforwa
 
 We however provide a network diagram on how it works under the hood for reference.
 
-![Service Queue Hosted.drawio.png](_resources/Hosted%20Services/16f43185b4d19dfcb42d52395a885859_MD5.jpg)
+````mermaid
+flowchart TD;
 
+    Users("👥 Users")
+    Internet("🌐 Internet")
+    Proxy["🔄 Reverse Proxy<br/>🚀 Nginx<br/>"]
+    Frontend["🗄️ Docker Container<br/>📱 Frontend App<br/>"]
+    Backend["🗄️ Docker Container<br/>🔧 Backend API<br/>"]
+    Server("🖥️ Server")
+
+    Users --> Internet
+    Internet --> Proxy
+    Proxy --> Server
+
+    Server --> Backend
+    Server --> Frontend
+    Frontend -.->|"📞 API Calls<br/>🔐 Auth"| Backend
+    
+    classDef primary fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef secondary fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef infrastructure fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    
+    class Users,Internet,Server infrastructure
+    class Proxy secondary
+    class Frontend,Backend primary
+````
 ### Project Requirements 
 We require the following for all projects
 - Compatible with ARM64 architecture as our server are a fleet of Orange Pi 5s
