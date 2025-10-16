@@ -115,4 +115,4 @@ Servers are unaffected by blackouts occurring between 8 AM to 3 PM thanks to PV 
 ### CI/CD Pipelines
 For frontend and backend applications [hosted locally](Hosted%20Services.md), automated deployments are possible via [Woodpecker](https://github.com/woodpecker-ci/woodpecker). This is preferred over GitHub Actions or similar platforms.
 
-Sample `.yml` files are provided in this [repository](https://github.com/lemeow125/Service_Queue)for starters.
+Sample `.yml` files are provided in this [repository](https://github.com/lemeow125/Service_Queue) for starters.
