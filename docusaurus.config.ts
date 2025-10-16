@@ -20,7 +20,13 @@ const config: Config = {
   projectName: "notes", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+    mermaid: true
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -30,9 +36,6 @@ const config: Config = {
     locales: ["en"],
   },
 
-  markdown: {
-    mermaid: true,
-  },
   themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
