@@ -8,9 +8,12 @@ steps:
         from_secret: CLOUDFLARE_API_TOKEN
     commands:
       - apk add git
-      - npm install --save-dev
+      - npm install --save-dev --cache /tmp/.npm
       - npm run build
       - npx wrangler pages deploy "./build/" --project-name blog --branch master --commit-dirty
+    volumes:
+      - /tmp/.npm:/tmp/.npm
+      - /tmp/.node:/usr/local/lib/node_modules/.cache
   - name: discord
     image: appleboy/drone-discord
     settings:
