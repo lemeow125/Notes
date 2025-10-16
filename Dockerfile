@@ -3,7 +3,9 @@ FROM node:23-alpine AS build
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 RUN apk update && apk add git
-RUN npm install --save-dev
+RUN --mount=type=cache,target=/root/.npm \
+    --mount=type=cache,target=/usr/local/app/node_modules/.cache \
+    npm install --save-dev
 RUN npm run build
 
 FROM nginx:latest
