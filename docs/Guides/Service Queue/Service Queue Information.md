@@ -8,6 +8,7 @@ graph TB
     classDef serviceStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:1px
     classDef backupStyle fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
     classDef ciStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef clusterStyle fill:#f0f0f0,stroke:#666,stroke-width:1px,stroke-dasharray: 5 5
     
     %% Servers
     subgraph "🖥️ Servers Cluster"
@@ -18,10 +19,8 @@ graph TB
     
     CI["🚀 CI/CD Server\n(Woodpecker CI)"]
     
-    subgraph "💾 Backup Cluster - Borg Group"
-        B1["📀 Backup Location 1\n(Borg Repository)"]
-        B2["📀 Backup Server 2\n(Borg Repository)"]
-    end
+    %% Backup Cluster as single entity
+    BC["💾 Backup Cluster\nBorg Repositories"]:::backupStyle
     
     %% Game Services
     subgraph S1
@@ -53,14 +52,10 @@ graph TB
         CID["📋 Woodpecker CI"]
     end
     
-    %% Backup Relationships
-    S1 -.->|Borg Backup| B1
-    S2 -.->|Borg Backup| B1
-    S3 -.->|Borg Backup| B1
-    
-    S1 -.->|Borg Backup| B2
-    S2 -.->|Borg Backup| B2
-    S3 -.->|Borg Backup| B2
+    %% Simplified Backup Relationships
+    S1 -.->|Borg Backup| BC
+    S2 -.->|Borg Backup| BC
+    S3 -.->|Borg Backup| BC
     
     %% CI/CD Relationships
     CI -->|Triggers Builds| S2
@@ -77,7 +72,7 @@ graph TB
     %% Apply Styling
     class S1,S2,S3 serverStyle
     class S1A,S1B,S1C,S2A,S2B,S2C,S3A,S3B,S3C,S3D serviceStyle
-    class B1,B2 backupStyle
+    class BC backupStyle
     class CI,CIA,CIB,CIC,CID ciStyle
 
     %% Legend
@@ -107,7 +102,7 @@ Traffic is usually pinned on the first ISP for lower traffic services. If you ha
 
 
 
-#### Backups/Continuity
+### Backups/Continuity
 Hosted services are backed up using [Borg](https://www.borgbackup.org/)
 - Two **local** backup locations
 - Backup snapshots taken every 8 hours
@@ -117,7 +112,7 @@ Server nodes are also backed by a [UPS-capable power station](https://www.bluett
 Servers are unaffected by blackouts occurring between 8 AM to 3 PM thanks to PV systems.
 
 
-#### CI/CD Pipelines
+### CI/CD Pipelines
 For frontend and backend applications [hosted locally](Hosted%20Services.md), automated deployments are possible via [Woodpecker](https://github.com/woodpecker-ci/woodpecker). This is preferred over GitHub Actions or similar platforms.
 
 Sample `.yml` files are provided in this [repository](https://github.com/lemeow125/Service_Queue)for starters.
