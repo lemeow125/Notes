@@ -31,7 +31,9 @@ steps:
           {{repo.name}} build #{{build.number}} {{build.status}}
         {{/success}}
     depends_on: build
-
+    when:
+      status: [ success, failure ]
+      
 when:
   - branch: master
     event:
