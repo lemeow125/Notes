@@ -1,0 +1,12 @@
+steps:
+  - name: markdown lint
+    image: ghcr.io/igorshubovych/markdownlint-cli:master
+    commands:
+      - markdownlint docs
+      
+when:
+  - branch: master
+    event:
+      - push
+      - manual
+      - pull_request

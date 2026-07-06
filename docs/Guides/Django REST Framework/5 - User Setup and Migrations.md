@@ -1,7 +1,9 @@
 ### Authentication with Djoser
+
 Django REST Framework provides basic authentication out of the box, provided with the defaults located in **INSTALLED_APPS** under `settings.py`
 
 To build robust applications however, you will need to more functionality than what it offers;
+
 - Registration
 - Account Activation (with activation codes sent via email)
 - Password Resets (also sent via email)
@@ -50,10 +52,12 @@ path('', include('djoser.urls.jwt'))
 
 Next step, models!
 
-### Note!
+### Note
+
 If you've gotten this far, congratulations! If you're not familiar with basic and intermediate SQL or Python exercises yet, you may have trouble catching up in the following sections. Please consider learning those first or alongside the sections below.
 
 ### User Model
+
 We've added authentication (Djoser) and so we will need to create our own concept of a user.
 
 Models are the heart of backend development (not just Django!). While you may know what a car or a person is, your backend (Django) and your database have no idea how this should be structured.
@@ -77,10 +81,13 @@ Instead, make sure you're inside the Django project directory by doing `cd PROJE
 We will then create an **accounts** app. Run the command `python manage.py startapp accounts`
 ![image.png](_resources/5%20-%20User%20Setup%20and%20Migrations/1acc5ed07b9837584efe9eef7b9f79f0_MD5.jpg)
 This will create the **accounts** app
-### Note!  
+
+### Note  
+
 The best practice when creating Django apps would be naming them in plural form (Books, Records, Posts)
 
 The Books app can hold
+
 - Books
 - Pages
 - Chapters
@@ -90,6 +97,7 @@ Because of this, there is usually no need to make another app for pages and chap
 With that out of the way, let's begin creating our User model.
 
 We will be creating our own version of a User based on the default one provided by Django [here](https://docs.djangoproject.com/en/5.1/ref/contrib/auth/)with an age and a birthday
+
 ```python
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -114,6 +122,7 @@ By referencing **AbstractUser** on the User we're creating, we're can skip over 
 We'll now need to connect our **accounts** app and the **User** model to our existing project
 
 Open the `admin.py` file in the **accounts** app and add the following code block.
+
 ```python
 from django.contrib import admin
 from .models import CustomUser
@@ -130,6 +139,7 @@ You should then head over to your `settings.py` under the **config** app and add
 ![image.png](_resources/5%20-%20User%20Setup%20and%20Migrations/0a19f2ef80c837f84ab52adef345e6d4_MD5.jpg)
 
 Point your authentication to your new **User** model by adding this to `settings.py` under the **config** app
+
 ```python
 AUTH_USER_MODEL = 'accounts.CustomUser'
 ```
@@ -139,6 +149,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 Next, you will need to shuffle some things around
 
 Head back to the **accounts** app and create a `urls.py` file. Add the following code block
+
 ```python
 from django.urls import path, include
 
@@ -151,6 +162,7 @@ urlpatterns = [
 You might notice that this is similar to what we have on the **api** app, we'll be moving these entries to here.
 
 Now that we have those moved over, remove the entries for **djoser.urls** and **djoser.urls.jwt** in `urls.py` under the **api** app
+
 ```python
 from django.contrib import admin
 from django.urls import path, include
@@ -161,6 +173,7 @@ urlpatterns = [
 ```
 
 Instead, replace what we've removed with
+
 ```python
 path('accounts/', include('accounts.urls')),
 ```
@@ -175,6 +188,7 @@ Things should look like this after
 With this, your new **accounts** app is now connected.
 
 ### Migrations
+
 Django and Django REST Framework (DRF) serves as an interface between your database (MySQL, PostgreSQL, SQLite) and the internet.
 
 It **DOES NOT** hold your data. Rather, it serves as the **backend** to access said data.
@@ -189,7 +203,8 @@ Migrations keep track of what types of kinds of things we wish to store. You pre
 ![image.png](_resources/5%20-%20User%20Setup%20and%20Migrations/1862970ccde9154f045c5140f0abf05c_MD5.jpg)
 To apply these changes to your database, run the command `python manage.py makemigrations`
 
-### Note!
+### Note
+
 Make sure you're inside the Django project directory! (e.g. `cd PROJECT\_NAME`)
 ![image.png](_resources/5%20-%20User%20Setup%20and%20Migrations/d78e3aa3a9bf33079c0545dcb339d0ec_MD5.jpg)
 This will create a migration file for your **User** model, which will instruct Django on how to create it inside your SQL database.
@@ -215,6 +230,7 @@ Django's migrations will also let you know if you make changes to your models th
 This is something you should ideally understand with Django and how it interfaces with your database under the hood.
 
 ### Apply Migrations
+
 If you've noticed this error in the previous sections, this is because we haven't applied our migrations yet!
 ![image.png](_resources/5%20-%20User%20Setup%20and%20Migrations/a4ed5645c21b33f9823d14533e4c3ef4_MD5.jpg)
 With your user schema or template now set up, you should now apply these changes to the database.

@@ -20,6 +20,7 @@ This will create a Pipfile in your project folder. This will track what packages
 I highly suggest you install the [Python VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) at this step to help with your developer experience
 
 ![4997f4d3a648a6ab9f5ac19c8211374f_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/4997f4d3a648a6ab9f5ac19c8211374f_MD5.jpg)
+
 ### Initialize Git
 
 When working on software projects such as Django, you will need to be able to track small changes. We'll be using Git for that
@@ -66,12 +67,13 @@ On your current project's code editor, open a terminal or command line and type 
 This will update your Pipfile and create a Pipfile.lock to reflect the installed packages
 
 ![bb5d783ca5d693451fc98425856492b9_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/bb5d783ca5d693451fc98425856492b9_MD5.jpg)
+
 ### Initialize the Project
 
-In your code editor's terminal or command prompt, run the command 
+In your code editor's terminal or command prompt, run the command
 `django-admin startproject PROJECT\_NAME`
 
-![9fa2115388cde426285a656a7e9965d5_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/9fa2115388cde426285a656a7e9965d5_MD5.jpg)](https://bookstack.06222001.xyz/uploads/images/gallery/2024-09/i5bimage.png)
+![9fa2115388cde426285a656a7e9965d5_MD5](_resources/2%20-%20Initialize%20your%20First%20Project/9fa2115388cde426285a656a7e9965d5_MD5.jpg)](<https://bookstack.06222001.xyz/uploads/images/gallery/2024-09/i5bimage.png>)
 
 Be sure to replace it with your own project name! I named mine `djangobackend`.
 

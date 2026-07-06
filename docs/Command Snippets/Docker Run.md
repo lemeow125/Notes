@@ -1,4 +1,5 @@
 - [QBittorrent](https://ghcr.io/hotio/qbittorrent)
+
 ```bash
 docker run \
     --restart=always \
@@ -14,7 +15,9 @@ docker run \
     -v /mnt:/mnt \
     ghcr.io/hotio/qbittorrent
 ```
+
 - [Unbound](https://hub.docker.com/r/mvance/unbound) (DNS Resolver)
+
 ```bash
 docker run \
 --name=unbound-rpi \
@@ -24,17 +27,21 @@ docker run \
 --detach=true \
 mvance/unbound-rpi:latest
 ```
+
 - [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+
 ```bash
 docker run \
-	-d \
-	--restart=always \
-	-p 8082:3001 \
-	-v /mnt/sda1/docker-volume-mounts/uptime-kuma:/app/data \
-	--name uptime-kuma \
-	louislam/uptime-kuma:1
+ -d \
+ --restart=always \
+ -p 8082:3001 \
+ -v /mnt/sda1/docker-volume-mounts/uptime-kuma:/app/data \
+ --name uptime-kuma \
+ louislam/uptime-kuma:1
 ```
+
 - OpenStreetMap
+
 ```bash
 # Import .pbf file
 docker run \
@@ -61,7 +68,9 @@ docker run \
 tmux new-session -d -s "Render OSM Tiles" 'docker exec -it osm-tileserver "git clone https://github.com/alx77/render_list_geo.pl && cd render_list_geo.pl && ./render_list_geo.pl -n 4 -z 3 -Z 18 -x 124.33 -X 124.94 -y 8.13 -Y 8.65 -m default"'
 
 ```
+
 - [Minetest](https://lscr.io/linuxserver/minetest)
+
 ```bash
 docker run -d \
   --name=minetest \
@@ -74,7 +83,9 @@ docker run -d \
   --restart always\
   lscr.io/linuxserver/minetest:latest
 ```
+
 - [Jellyfin](https://github.com/jellyfin/jellyfin) (via [jellyfin-mpp](https://hub.docker.com/r/jjm2473/jellyfin-mpp) fork for Orange Pi 5 support)
+
 ```bash
 docker run --name jellyfin \
     --privileged \
@@ -89,7 +100,9 @@ docker run --name jellyfin \
     -v /mnt:/mnt \
     jjm2473/jellyfin-mpp:latest
 ```
+
 - [Sonarr](https://lscr.io/linuxserver/sonarr)
+
 ```bash
 docker run -d \
   --name=sonarr \
@@ -102,7 +115,9 @@ docker run -d \
   --restart always \
   lscr.io/linuxserver/sonarr:latest
 ```
+
 - [Prowlarr](https://lscr.io/linuxserver/prowlarr)
+
 ```
 docker run -d \
   --name=prowlarr \
@@ -114,7 +129,9 @@ docker run -d \
   --restart always \
   lscr.io/linuxserver/prowlarr:latest
 ```
+
 - [Jackett](https://ghcr.io/hotio/jackett)
+
 ```bash
 docker run --rm \
     --name jackett \
@@ -126,22 +143,26 @@ docker run --rm \
     -v /mnt/sda1/docker-volume-mounts/jackett:/config \
     ghcr.io/hotio/jackett
 ```
+
 - [Firefox Container](https://lscr.io/linuxserver/firefox)
+
 ```bash
 docker run \
-	-d \
-	--name=firefox \
-	--security-opt seccomp=unconfined \
-	-e PUID=1000 \
-	-e PGID=1000 \
-	-e TZ=Asia/Manila \
-	-p 3001:3000 \
-	-v /mnt/nvme/docker-volume-mounts/firefox-config:/config \
-	--shm-size="2gb" \
-	--restart always \
-	lscr.io/linuxserver/firefox:latest 
+ -d \
+ --name=firefox \
+ --security-opt seccomp=unconfined \
+ -e PUID=1000 \
+ -e PGID=1000 \
+ -e TZ=Asia/Manila \
+ -p 3001:3000 \
+ -v /mnt/nvme/docker-volume-mounts/firefox-config:/config \
+ --shm-size="2gb" \
+ --restart always \
+ lscr.io/linuxserver/firefox:latest 
 ```
+
 - [Prometheus](https://hub.docker.com/r/prom/prometheus)
+
 ```bash
 docker run \
     -p 9090:9090 \
@@ -149,7 +170,9 @@ docker run \
     --restart unless-stopped \
     prom/prometheus
 ```
+
 - [Inbucket](https://hub.docker.com/r/inbucket/inbucket/)
+
 ```bash
 docker run -d --restart=always --name inbucket \
 -p 8025:8025 \
@@ -161,7 +184,9 @@ docker run -d --restart=always --name inbucket \
 -e INBUCKET_STORAGE_MAILBOXMSGCAP="5000" \
 inbucket/inbucket:latest 
 ```
+
 - [Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)
+
 ```bash
 docker run \
   --name dns-server \
@@ -177,9 +202,9 @@ docker run \
   --sysctl net.ipv4.ip_local_port_range="1024 65000" \
   technitium/dns-server:latest
 ```
+
 - [Open WebUI](https://github.com/open-webui/open-webui)
+
 ```bash
 docker run -d -p 9001:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data -e WEBUI_URL="https://openwebui.06222001.xyz"  --name open-webui --restart always ghcr.io/open-webui/open-webui:v0.5.7
 ```
-
-

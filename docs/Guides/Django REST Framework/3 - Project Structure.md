@@ -19,7 +19,6 @@ This contains the following
 
 #### Django Apps  
 
-
 Django divides your projects into groups called apps. When you start a new project, you start off with your first app.
 
 In this case, my first app is named `djangobackend`

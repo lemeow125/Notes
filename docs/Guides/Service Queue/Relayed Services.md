@@ -1,4 +1,5 @@
 ### Overview
+
 You can also opt to use your own servers/devices for hosting with the Service Queue project. Traffic can be relayed through a provided Wireguard VPN to direct subdomain or port traffic to your server
 
 ````mermaid
@@ -29,12 +30,15 @@ flowchart TD;
     class Proxy secondary
     class Frontend,Backend primary
 ````
+
 The diagram above serves as reference for the infrastructure setup with relayed services
 
 Game servers can be served via the relay by forwarding the required TCP/UDP ports
 
 ### Project Requirements
+
 The following requirements are needed for relayed projects
+
 - A PC, laptop, or similar device
   - The device must be compatible with Wireguard VPN
   - The device must run 24/7 (or at least run continuously when required for your services to be usable)
