@@ -1,9 +1,7 @@
 ### Overview
-
-The Service Queue project is intended for hobbyists and students interested in the field of tech.
+The Service Queue project is intended for hobbyists and students interested in the field of tech. 
 
 We provide the following free-of-charge:
-
 - Free Hosting: Get your projects online without worrying about the costs associated with hosting services  
 - Deployments: CI/CD for hosted projects via Woodpecker
 - SSL Certificates: Projects are HTTPS-capable, with managed certificates provided
@@ -11,12 +9,10 @@ We provide the following free-of-charge:
 - Backups: Daily on-premise backups via [Borg](https://www.borgbackup.org/)
 
 The Service Queue project offers the following hosting setups
-
 - [Hosted Services](Hosted%20Services.md)
 - [Relayed Services](Relayed%20Services.md)
 
 These additional resources may also be of use
-
 - [SMTP Credentials](SMTP%20Credentials.md)
 
 See this page for more information on how Service Queue deployments are done: [Service Queue Information](Service%20Queue%20Information.md)

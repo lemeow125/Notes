@@ -1,5 +1,4 @@
 ### Overview
-
 APIs, apps, and game servers within the service queue are run directly on my own home lab. A brief overview is provided below.
 
 ````mermaid
@@ -86,27 +85,25 @@ graph TB
 ````
 
 ### Resource Limits
-
 There are **no** hard resource limits when availing of services via the service queue. Hosting is catered to on a first-come-first-serve basis.
 
 Resources in each server however are shared amongst other services, based on the server node you are assigned to. Internet traffic is shared amongst all servers, with speeds of up to 80mbps. There is **no** ingress/egress limit.
 
 In general, each server will have the following minimum specs
-
 - 8-core processor
 - 64GB DDR4
 - 1TB NVME storage
 
-### Ingress/Egress
 
+### Ingress/Egress
 Internet traffic is shared amongst all servers across 4 ISPs, with speeds of up to 80mbps for each ISP connection. There is **no** ingress/egress limit.
 
 Traffic is usually pinned on the first ISP for lower traffic services. If you have specific bandwidth or requirements, please have this outlined in your request.
 
+
+
 ### Backups/Continuity
-
 Hosted services are backed up using [Borg](https://www.borgbackup.org/)
-
 - Two **local** backup locations
 - Backup snapshots taken every 8 hours
 
@@ -114,8 +111,8 @@ Server nodes are also backed by a [UPS-capable power station](https://www.bluett
 
 Servers are unaffected by blackouts occurring between 8 AM to 3 PM thanks to PV systems.
 
-### CI/CD Pipelines
 
+### CI/CD Pipelines
 For frontend and backend applications [hosted locally](Hosted%20Services.md), automated deployments are possible via [Woodpecker](https://github.com/woodpecker-ci/woodpecker). This is preferred over GitHub Actions or similar platforms.
 
 Sample `.yml` files are provided in this [repository](https://github.com/lemeow125/Service_Queue) for starters.

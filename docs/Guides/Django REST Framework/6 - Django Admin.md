@@ -1,5 +1,4 @@
 ### Admin Panel Overview
-
 By default, all Django apps come with an administrator panel to manage all your models, this includes users too!
 
 ![image.png](_resources/6%20-%20Django%20Admin/b7491027aff381ac2c193b31c11750bf_MD5.jpg)
@@ -12,12 +11,10 @@ In the admin panel, you can do CRUD operations on your models without having to 
 
 Right now, you won't be able to access it yet, you haven't made an administrator account after all. This will be outlined in the steps below.
 
-### Note
-
+### Note!
 The theme above comes from the [django-unfold](https://github.com/unfoldadmin/django-unfold) library. The default design should look the same. You will run into the setup guide django-unfold and other libraries later on, so sit tight!
 
 ### Creating an Admin Account  
-
 To create a superuser or administrator account. Open a terminal inside your Django project directory and run the command `python manage.py createsuperuser`
 ![image.png](_resources/6%20-%20Django%20Admin/37fd4cc32b79595791c1a0596156a54b_MD5.jpg)
 

@@ -1,5 +1,4 @@
 ### Command Snippets
-
 - [Ansible Snippets](Ansible%20Snippets.md)
 - [Bash Commands](Bash%20Commands.md)
 - [Docker - Miscellaneous](Docker%20-%20Miscellaneous.md)
