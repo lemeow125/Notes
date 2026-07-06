@@ -41,4 +41,7 @@ ansible-playbook playbook.yml -u root -k
 - Run setup playbook
 ```
 ansible-playbook roles/tasks/debian/setup.yml --inventory inventory//hosts -u keannu125 -k --ask-become-pass
+
+# orangepi
+ansible-playbook roles/tasks/debian/setup.yml --inventory inventory//hosts -u orangepi -k --ask-become-pass
 ```
