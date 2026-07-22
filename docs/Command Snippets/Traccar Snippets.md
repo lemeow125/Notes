@@ -1,4 +1,4 @@
-#### Sinotrak 906L
+#### Sinotrak ST-906L/ST-915/ST-909L
 - Set APN (SMART)
 ```sms
 8030000 internet
