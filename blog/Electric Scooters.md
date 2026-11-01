@@ -1,5 +1,6 @@
 ### First Steps
 ![](_resources/Electric%20Scooters/838aaf62d40ac62f99816a97c0fd64c5_MD5.jpeg)
+
 (Photo by: Official NXT/Boardwalk Page)
 
 I am personally an avid fan of electric vehicles, and so evidently one of the first things I bought with larger paychecks was an NXT Voltaris Pro S v1. We bought earlier this year, and continue to use it for errands still for family and loved ones.
@@ -21,6 +22,7 @@ EVs are by design heavier than traditional ones. The Voltaris Pro S v1 for insta
 
 
 ![](_resources/Electric%20Scooters/679d66ad9542e06007b6442dd4451210_MD5.jpeg)
+
 (Photo by: [ECOPower Store Lazada](https://www.lazada.com.ph/products/i5160441572-s30581128636.html))
 
 Each panel I added in weighed 2.2kg, totaling 11kg for 5 (not accounting for mounting). 
@@ -43,6 +45,7 @@ Electric scooters are far more efficient than anything else right now, even comp
 | **[NXT Storm XRE](https://nxtebike.com.ph/products/storm-xre)**     | High-Performance E-Motorcycle     | **200 – 250 km**        | ₱216,599            |
 | **[Wuling Macaron (170km variant)](https://wulingph.com/macaron/)** | Mini Electric Car (M1 Class)      | **170 km**              | ₱600,000 – ₱699,000 |
 | Typical Lazada 500W E-Bike                                          | Budget Electric Bicycle / Scooter | **40 – 60 km**          | ₱9,500 – ₱15        |
+
 (Disclaimer: Scraped from online sites via Gemini)
 
 
@@ -59,6 +62,7 @@ I've gone through all of these from E-bike to E-scooter to EV, this should hopef
 Back to my motorcycle now!
 
 ![](_resources/Electric%20Scooters/d7fd7cd1fff93e38432cf9cbeb055181_MD5.jpeg)
+
 You're obviously not doing a one-day Davao trip on this thing, or even electric vehicles in general around or below the 2M PHP price-range, and so adopting EVs on the low-end of the price range requires you to change your trips up a bit.
 
 The 590km example above might also be longer in reality with range calculations, as steeper slopes will use up more juice. So on the lower-end of the price range, one-day EV trips are still impossible.
@@ -80,6 +84,7 @@ Range is no longer an issue, sure, but there's more factors at play that you mig
 #### Motor
 
 ![](_resources/Electric%20Scooters/d63fbdfd6b8b9caf26e23955ffba0a6e_MD5.jpeg)
+
 (Photo by: [EV Infrastructure News)](https://www.evinfrastructurenews.com/ev-technology/electric-vehicle-ev-motors-technology-guide)
 
 EVs are powered by electric motors. They're just like gasoline engines, but with their own quirks.
