@@ -100,15 +100,15 @@ function QuickLinksSection() {
         <div className={styles.quickBox}>
           <div>
             <Heading as="h2" style={{ marginBottom: "0.25rem" }}>
-              Looking for raw notes or live systems?
+              Looking for blog posts or live systems?
             </Heading>
             <p style={{ margin: 0, opacity: 0.85 }}>
-              Check out casual dev logs in the Notes section or inspect live self-hosted service uptime.
+              Check out casual dev logs or inspect self-hosted service uptime live.
             </p>
           </div>
           <div className={styles.buttons}>
             <Link className="button button--outline button--primary" to="/blog">
-              Casual Notes
+              Blog
             </Link>
             <Link className="button button--outline button--secondary" href="https://stats.06222001.xyz">
               Live Status Tracker ↗

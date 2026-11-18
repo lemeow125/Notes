@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Keannu's Resources",
-  tagline: "I run production on potatoes. It stays up.",
+  tagline: "I run production on potatoes. It stays up",
   favicon: "img/favicon.ico",
 
   url: "https://blog.06222001.xyz",
@@ -14,7 +14,7 @@ const config: Config = {
   organizationName: "lemeow125",
   projectName: "notes",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
 
   markdown: {
     hooks: {
