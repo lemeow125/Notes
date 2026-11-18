@@ -1,4 +1,12 @@
-### First Steps
+---
+slug: electric-scooters
+title: Electric Scooters
+authors: [keannu125]
+tags: [scooters, electric, solar, dokuwiki, obsidian]
+date: 2026-11-01
+---
+
+### My First Steps
 ![](_resources/Electric%20Scooters/838aaf62d40ac62f99816a97c0fd64c5_MD5.jpeg)
 
 (Photo by: Official NXT/Boardwalk Page)

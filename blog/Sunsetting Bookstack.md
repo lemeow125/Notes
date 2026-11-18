@@ -1,3 +1,11 @@
+---
+slug: sunsetting-bookstack
+title: Sunsetting BookStack & Migrating to Docusaurus
+authors: [keannu125]
+tags: [announcement, bookstack, docusaurus, migration]
+date: 2024-10-14
+---
+
 Starting October 14, All URLs from my [Bookstack](https://github.com/BookStackApp/BookStack) [instance](https://bookstack.06222001.xyz/) from blogs and guides will redirect [here](https://resources.06222001.xyz/). I will be archiving the legacy site and will now mainly be using this [Docusaurus](https://docusaurus.io/) instance. 
 
 You can still find the exact blog posts, guides, and bookmarks in the [Docs](https://resources.06222001.xyz/docs) section, kept up to date on whatever shenanigans I come across.

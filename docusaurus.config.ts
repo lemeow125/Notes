@@ -1,23 +1,18 @@
+// docusaurus.config.ts
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Keannu's Resources",
-  tagline: "One-stop shop for rolling out production environments on potatoes",
+  tagline: "I run production on potatoes. It stays up.",
   favicon: "img/favicon.ico",
 
-  // Set the production url of your site here
   url: "https://blog.06222001.xyz",
-
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "lemeow125", // Usually your GitHub org/user name.
-  projectName: "notes", // Usually your repo name.
+  organizationName: "lemeow125",
+  projectName: "notes",
 
   onBrokenLinks: "throw",
 
@@ -25,18 +20,15 @@ const config: Config = {
     hooks: {
       onBrokenMarkdownLinks: "throw",
     },
-    mermaid: true
+    mermaid: true,
   },
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
 
   presets: [
     [
@@ -47,11 +39,11 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          blogTitle: "Notes & Blog",
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "ignore",
@@ -63,24 +55,68 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "work-case-studies",
+        routeBasePath: "work/case-studies",
+        path: "./work/case-studies",
+        blogTitle: "Case Studies",
+        blogDescription: "Real-world infrastructure deployments and outcomes",
+        blogSidebarTitle: "Case Studies",
+        blogSidebarCount: "ALL",
+        showReadingTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "work-engineering",
+        routeBasePath: "work/engineering-writeups",
+        path: "./work/engineering-writeups",
+        blogTitle: "Engineering Writeups",
+        blogDescription: "Architecture deep-dives, post-mortems, and benchmarks",
+        blogSidebarTitle: "Engineering Writeups",
+        blogSidebarCount: "ALL",
+        showReadingTime: true,
+      },
+    ],
+  ],
+
   themeConfig: {
     navbar: {
-      title: "Keannu's Resources",
+      title: "Keannu",
       logo: {
-        alt: "My Site Logo",
+        alt: "Keannu Logo",
         src: "img/logo.svg",
       },
       items: [
-        { to: "/blog", label: "Blog", position: "left" },
-        { to: "/docs", label: "Docs", position: "left" },
         {
-          href: "https://github.com/lemeow125/Notes",
-          label: "Github",
+          type: "dropdown",
+          label: "Work",
+          position: "left",
+          items: [
+            {
+              label: "Case Studies",
+              to: "/work/case-studies",
+            },
+            {
+              label: "Engineering Writeups",
+              to: "/work/engineering-writeups",
+            },
+          ],
+        },
+        { to: "/docs/Guides", label: "Guides & Docs", position: "left" },
+        { to: "/blog", label: "Blog", position: "left" },
+        {
+          href: "https://stats.06222001.xyz",
+          label: "Status",
           position: "right",
         },
         {
-          href: "https://stats.06222001.xyz/status/all",
-          label: "Tracker",
+          href: "https://github.com/lemeow125/Notes",
+          label: "GitHub",
           position: "right",
         },
       ],
@@ -89,41 +125,30 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Work",
           items: [
-            {
-              label: "Files & Links",
-              to: "/docs/Files & Links",
-            },
-            {
-              label: "Command Snippets",
-              to: "/docs/Command Snippets",
-            },
-            {
-              label: "Guides",
-              to: "/docs/Guides",
-            },
+            { label: "Case Studies", to: "/work/case-studies" },
+            { label: "Engineering Writeups", to: "/work/engineering-writeups" },
           ],
         },
         {
-          title: "Community",
+          title: "Knowledge Base",
           items: [
-            {
-              label: "Discord",
-              href: "https://discord.gg/eewxxH3wtS",
-            },
+            { label: "Guides", to: "/docs/Guides" },
+            { label: "Command Snippets", to: "/docs/Command Snippets" },
+            { label: "Files & Links", to: "/docs/Files & Links" },
           ],
         },
         {
-          title: "More",
+          title: "Links",
           items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/lemeow125/Notes",
-            },
+            { label: "System Tracker", href: "https://stats.06222001.xyz" },
+            { label: "Discord", href: "https://discord.gg/eewxxH3wtS" },
+            { label: "GitHub", href: "https://github.com/lemeow125/Notes" },
           ],
         },
       ],
+      copyright: `Copyright © ${new Date().getFullYear()} Keannu.`,
     },
     prism: {
       theme: prismThemes.github,

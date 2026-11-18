@@ -1,23 +1,108 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* src/pages/index.module.css */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  padding: 5rem 0 4rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--ifm-color-primary-contrast-background);
+  color: var(--ifm-color-primary);
+}
+
+.heroTitle {
+  font-size: 3rem;
+  line-height: 1.15;
+  max-width: 720px;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  max-width: 640px;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pillarsSection {
+  padding: 4rem 0 2rem;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-card-background-color);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ifm-color-primary);
+}
+
+.cardTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+}
+
+.cardTitle {
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.cardLink {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.quickSection {
+  padding: 1rem 0 5rem;
+}
+
+.quickBox {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+@media screen and (max-width: 768px) {
+  .heroBanner {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.1rem;
+  }
 }
