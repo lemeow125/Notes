@@ -118,7 +118,8 @@ const config: Config = {
             },
           ],
         },
-        { to: "/docs/Guides", label: "Guides & Docs", position: "left" },
+        { to: "/docs", label: "Docs", position: "left" },
+        { to: "/docs/Guides", label: "Guides", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://stats.06222001.xyz",
@@ -154,8 +155,7 @@ const config: Config = {
         {
           title: "Links",
           items: [
-            { label: "System Tracker", href: "https://stats.06222001.xyz" },
-            { label: "Discord", href: "https://discord.gg/eewxxH3wtS" },
+            { label: "API", href: "https://stats.06222001.xyz" },
             { label: "GitHub", href: "https://github.com/lemeow125/Notes" },
           ],
         },

@@ -32,11 +32,11 @@ const PILLARS: PillarItem[] = [
     cta: "Explore Writeups →",
   },
   {
-    title: "Guides & Docs",
-    tag: "Knowledge Base",
+    title: "Docs",
+    tag: "Docs",
     description:
-      "Command snippets, configuration templates, and step-by-step deployment manuals.",
-    link: "/docs/Guides",
+      "Command snippets, configuration templates.",
+    link: "/docs/Docs",
     cta: "Browse Docs →",
   },
 ];
