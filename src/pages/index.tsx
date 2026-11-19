@@ -57,12 +57,6 @@ function HeroSection() {
           <Link className="button button--primary button--lg" to="/work/working-with-me">
             Work with me
           </Link>
-          <Link className="button button--secondary button--lg" to="/work/case-studies">
-            View Case Studies
-          </Link>
-          <Link className="button button--primary button--lg" to="/work/engineering-writeups">
-            Engineering Writeups
-          </Link>
         </div>
       </div>
     </header>

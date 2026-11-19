@@ -105,7 +105,7 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "Working with me",
+              label: "Work with me",
               to: "/work/working-with-me",
             },
             {
