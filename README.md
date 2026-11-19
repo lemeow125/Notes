@@ -1,5 +1,4 @@
 ![status-badge](https://woodpecker.06222001.xyz/api/badges/1/status.svg)
-![Site Status](https://stats.keannu5.duckdns.org/api/badge/122/status)
 
 A Git mirror of my Markdown format blog posts, guides, and public notes.
 ### Contents

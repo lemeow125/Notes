@@ -19,7 +19,7 @@ const PILLARS: PillarItem[] = [
     title: "Case Studies",
     tag: "Work",
     description:
-      "End-to-end infrastructure rollouts, resource constraints, and measurable outcomes on low-cost hardware.",
+      "End-to-end rollouts, constraints, and measurable outcomes.",
     link: "/work/case-studies",
     cta: "Read Case Studies →",
   },
@@ -27,15 +27,15 @@ const PILLARS: PillarItem[] = [
     title: "Engineering Writeups",
     tag: "Work",
     description:
-      "Deep-dives into system architecture, networking, CI/CD pipelines, and lessons learned in production.",
+      "System deep-dives, things built, and lessons learned in writing code.",
     link: "/work/engineering-writeups",
     cta: "Explore Writeups →",
   },
   {
-    title: "Guides & Runbooks",
+    title: "Guides & Docs",
     tag: "Knowledge Base",
     description:
-      "Battle-tested command snippets, configuration templates, and step-by-step deployment manuals.",
+      "Command snippets, configuration templates, and step-by-step deployment manuals.",
     link: "/docs/Guides",
     cta: "Browse Docs →",
   },
@@ -46,18 +46,21 @@ function HeroSection() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
-        <span className={styles.badge}>Infrastructure • DevOps • Systems</span>
+        <span className={styles.badge}>Infrastructure • Influence • Direction</span>
         <Heading as="h1" className={styles.heroTitle}>
-          I run production on potatoes. It stays up.
+          I run production on constraints given.
         </Heading>
         <p className={styles.heroSubtitle}>
-          {siteConfig.tagline}. Browse real-world case studies, engineering deep-dives, and reusable deployment runbooks.
+           Be it potatos or an Azure tenant, it stays up. Real-world case studies, engineering deep-dives, and actively used runbooks.
         </p>
         <div className={styles.buttons}>
-          <Link className="button button--primary button--lg" to="/work/case-studies">
+          <Link className="button button--primary button--lg" to="/work/working-with-me">
+            Work with me
+          </Link>
+          <Link className="button button--secondary button--lg" to="/work/case-studies">
             View Case Studies
           </Link>
-          <Link className="button button--secondary button--lg" to="/work/engineering-writeups">
+          <Link className="button button--primary button--lg" to="/work/engineering-writeups">
             Engineering Writeups
           </Link>
         </div>
@@ -100,10 +103,10 @@ function QuickLinksSection() {
         <div className={styles.quickBox}>
           <div>
             <Heading as="h2" style={{ marginBottom: "0.25rem" }}>
-              Looking for blog posts or live systems?
+              Looking for something else?
             </Heading>
             <p style={{ margin: 0, opacity: 0.85 }}>
-              Check out casual dev logs or inspect self-hosted service uptime live.
+              Check out blog posts or inspect actual services live.
             </p>
           </div>
           <div className={styles.buttons}>
@@ -111,7 +114,7 @@ function QuickLinksSection() {
               Blog
             </Link>
             <Link className="button button--outline button--secondary" href="https://stats.06222001.xyz">
-              Live Status Tracker ↗
+              API Tracker ↗
             </Link>
           </div>
         </div>

@@ -5,7 +5,6 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Keannu's Resources",
-  tagline: "I run production on potatoes. It stays up",
   favicon: "img/favicon.ico",
 
   url: "https://blog.06222001.xyz",
@@ -57,6 +56,14 @@ const config: Config = {
 
   plugins: [
     [
+      "@docusaurus/plugin-content-pages",
+      {
+        id: "work-pages",
+        path: "./work/working-with-me",
+        routeBasePath: "work/working-with-me",
+      },
+    ],
+    [
       "@docusaurus/plugin-content-blog",
       {
         id: "work-case-studies",
@@ -98,6 +105,10 @@ const config: Config = {
           position: "left",
           items: [
             {
+              label: "Working with me",
+              to: "/work/working-with-me",
+            },
+            {
               label: "Case Studies",
               to: "/work/case-studies",
             },
@@ -127,6 +138,7 @@ const config: Config = {
         {
           title: "Work",
           items: [
+            { label: "Working with me", to: "/work/working-with-me" },
             { label: "Case Studies", to: "/work/case-studies" },
             { label: "Engineering Writeups", to: "/work/engineering-writeups" },
           ],
