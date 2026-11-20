@@ -4,7 +4,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Keannu's Resources",
+  title: "Keannu",
   favicon: "img/favicon.ico",
 
   url: "https://blog.06222001.xyz",
