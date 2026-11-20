@@ -11,7 +11,7 @@ However, as I started helping more peers, sharing guides, and solving recurring 
 
 Fast-forward a few years, and as my engineering work gained momentum, my needs evolved again. Beyond sharing quick technical guides, I needed a centralized platform to showcase deeper **case studies and engineering write-ups**—turning years of quiet execution into visible, verifiable proof of work.
 
-# The Trade-Offs
+## The Trade-Offs
 
 Turning a personal note-taking habit into a public-facing engineering hub meant making an unconventional architectural bet: treating raw personal notes like production source code.
 
@@ -20,7 +20,7 @@ Turning a personal note-taking habit into a public-facing engineering hub meant 
 - **Edge Static Hosting (Cloudflare Pages) vs. Self-Hosted Web Servers:** While I wanted full control over the build pipeline via self-hosted Woodpecker, running a self-hosted web server just to serve static HTML was unnecessary drag. Pushing the compiled frontend to **Cloudflare Pages** gave me global CDN edge caching and zero runtime server maintenance.
 - **Pure Documentation vs. Narrative Storytelling:** Standard documentation layouts work well for tactical guides, but they don't showcase strategic impact. Expanding the site's information architecture to separate **guides/docs** from **engineering write-ups and case studies** gave peers and engineering leaders clear, dedicated paths to explore my work.
 
-# Execution
+## Execution
 
 Rather than abandoning my Markdown habit for a traditional blogging platform, I wrapped my existing notes repository in a full software delivery lifecycle:
 
@@ -29,7 +29,7 @@ Rather than abandoning my Markdown habit for a traditional blogging platform, I 
 - **Zero-Server Edge Delivery on Cloudflare Pages:** Deployed the compiled static frontend to **Cloudflare Pages**, decoupling my self-hosted build infrastructure from globally distributed, zero-maintenance public serving.
 - **Multi-Format Content Architecture:** Evolved the site beyond reference documentation to house dedicated sections for **engineering write-ups** and **non-technical case studies** (including the page you are reading right now), turning daily engineering work into visible proof of craft.
 
-# Impact
+## Impact
 
 - **Zero-Friction "Commit-to-Publish" Workflow:** Turned personal note-taking into an automated publishing engine—committing a Markdown note triggers Woodpecker CI to build and deploy straight to Cloudflare's edge with zero manual file juggling.
 - **Safe Public/Private Isolation:** Maintained strict separation between private working notes and public content inside a single, cohesive workflow without risking accidental data exposure.

@@ -11,7 +11,7 @@ While the vendor mobile and web apps for basic visibility and controls, keeping 
 
 Taking inspiration from an existing community implementation built on Django by [thefarrukh](https://github.com/thefarrukh/auxsolcloud)  (cheers bud!), I decided to engineer a lightweight, free, and open-source alternative—[Auxol Cloud FastAPI](https://github.com/lemeow125/auxsolcloud)—designed specifically for low-overhead self-hosting and seamless Home Assistant ingestion.
 
-# The Trade-Offs
+## The Trade-Offs
 
 Farrukh built around a system at scale where one could add multiple inverters. I saw it from my lens at home with one.
 
@@ -22,7 +22,7 @@ The middleware bridge solution required a balance on developer ergonomics/veloci
 - **Read-Only Telemetry vs. Active Control:** Exposing passive metrics is straightforward, but true energy optimization requires write access. I prioritized exposing **Time-of-Use (ToU) control endpoints** alongside telemetry so Home Assistant automations can dynamically adjust charging/discharging windows rather than just passively logging data.
 - **Git-Native API Testing (Bruno) vs. Manual Verification:** Because upstream vendor APIs can change without notice, relying on manual checks is risky—especially when write endpoints modify inverter schedules. Instead of bloated GUI clients, I used **Bruno** (a plain-text, Git-friendly API test suite) to automate end-to-end contract verification before and after every deployment.
 
-# Execution
+## Execution
 
 I built the service on modern Python tooling (**Python 3.13+** and **`uv`**) to ensure fast dependency resolution and reproducible deployments:
 
@@ -34,7 +34,7 @@ I built the service on modern Python tooling (**Python 3.13+** and **`uv`**) to 
     - **Post-Deployment Verification:** Executes automated smoke tests against the live deployed container to verify production health, authentication, and network connectivity immediately after release.
 - **Zero-Friction Containerization:** Packaged the application with Docker and Docker Compose using environment-driven configuration (`.env` for credentials, serial numbers, and regional API base URLs), allowing other self-hosters to spin up the bridge in seconds.
 
-# Outcome
+## Outcome
 
 - **Full Home Assistant Integration:** Successfully liberated proprietary solar data into a local smart-home ecosystem, enabling unified energy monitoring and automated Time-of-Use battery orchestration.
 - **Lightweight Self-Hosted Footprint:** Replaced heavyweight framework overhead with a lean, asynchronous Python 3.13 + FastAPI service managed via `uv` and Docker.
