@@ -35,3 +35,11 @@ If it turns out I'm the right person to build the thing, we talk about that next
 - **Not an agency**. I put quality in work, a small number of things at a time.
 
 - **Small-scale paid work**. If you're a student or a junior, I will instead advise free-of-charge and give you direction. I will not build what you can learn out of.
+
+
+# Work
+
+I'm your average Joe when it comes to schedules—available Monday through Friday, no weird 3 AM emergency-only retainers required.
+
+- **Timezone flexibility.** Based in the Philippines, and I regularly align with UK, EU, and PH working hours without a hitch. Whether we need live overlap for pairing and triage or async handoffs, we'll make the clock work.
+- **Pacing that fits the problem.** I don't only do massive, full-time builds. If you need steady, smaller-scale progress—a few hours a week, a focused audit, or fractional help—we can negotiate a cadence that makes sense for your budget and backlog.
