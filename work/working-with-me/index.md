@@ -5,7 +5,7 @@ description: Ideas in, clean details and solution out
 ---
 
 # I show you perspective
-I'm a generalist by trade. Hand me a problem that doesn't have a clean owner yet and I'll work out what it actually is before deciding what to do about it. That's the useful part.
+I'm a generalist by trade. Hand me a problem that doesn't have a clean owner yet and I'll work out what it actually is before deciding what to do about it.
 
 # The diagnosis comes first
 
