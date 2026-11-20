@@ -3,7 +3,7 @@ title: Breaking through Closed-source Telemetry
 sidebar_class_name: hidden
 date: 2026-11-20
 ---
-![](_resources/engineering-writeups/85277724fcab81c694fd8e6797d01de0_MD5.jpeg)
+![](_resources/Auxsol%20Cloud%20FastAPI/85277724fcab81c694fd8e6797d01de0_MD5.jpeg)
 
 After installing a residential solar setup powered by an **Auxsol** brand inverter, I hit a common smart-home roadblock: the hardware relies on a closed-source cloud ecosystem (auxsolcloud.com) with no native local API or official Home Assistant integration.
 
