@@ -1,37 +1,41 @@
 ---
-title: Evolution of my Digital Garden
+title: Breaking through Closed-source Telemetry
 sidebar_class_name: hidden
 date: 2026-11-20
 ---
-![](_resources/Auxsol%20Cloud%20FastAPI/8cc2738ff2a9b5eea2cfad11674da1e6_MD5.jpeg)
+![](_resources/Notes/85277724fcab81c694fd8e6797d01de0_MD5.jpeg)
 
-For years, my technical notes, troubleshooting logs, and architecture references lived in a private collection of plain Markdown files. For personal recall, it worked great—fast to write, version-controlled, and friction-free. I use Obsidian with Syncthing, check it out!
+After installing a residential solar setup powered by an **Auxsol** brand inverter, I hit a common smart-home roadblock: the hardware relies on a closed-source cloud ecosystem (auxsolcloud.com) with no native local API or official Home Assistant integration.
 
-However, as I started helping more peers, sharing guides, and solving recurring engineering problems, keeping that knowledge locked in Google Notes or Drive created a bottleneck: I was constantly repeating explanations or copy-pasting raw notes that lacked navigation, search, or structure.
+While the vendor mobile and web apps for basic visibility and controls, keeping energy data trapped inside a proprietary portal prevents real-time home automation, custom energy dashboards, and automated battery management based on utility Time-of-Use (ToU) schedules.
 
-Fast-forward a few years, and as my engineering work gained momentum, my needs evolved again. Beyond sharing quick technical guides, I needed a centralized platform to showcase deeper **case studies and engineering write-ups**—turning years of quiet execution into visible, verifiable proof of work.
+Taking inspiration from an existing community implementation built on Django by [thefarrukh](https://github.com/thefarrukh/auxsolcloud)  (cheers bud!), I decided to engineer a lightweight, free, and open-source alternative—[Auxol Cloud FastAPI](https://github.com/lemeow125/auxsolcloud)—designed specifically for low-overhead self-hosting and seamless Home Assistant ingestion.
 
 # The Trade-Offs
 
-Turning a personal note-taking habit into a public-facing engineering hub meant making an unconventional architectural bet: treating raw personal notes like production source code.
+Farrukh built around a system at scale where one could add multiple inverters. I saw it from my lens at home with one.
 
-- **CI/CD for Personal Notes (Woodpecker) vs. Manual :** Running a **self-hosted Woodpecker CI/CD** pipeline just to publish personal Markdown notes sounds like an over-engineered "crazy take" on paper. In reality, manually copying files between a private vault and a public blog causes sync fatigue and human error. Automating the filter-and-deploy step meant I could keep writing in one place while letting CI/CD handle the publishing mechanics.
-- **Static Site Generator (Docusaurus) vs. Dynamic CMS:** Building a custom blog or managing a database-backed CMS adds server overhead and maintenance for fundamentally static content. **Docusaurus** let me keep my Markdown-first workflow while unlocking full-text search, structured sidebars, and clean typography.
-- **Edge Static Hosting (Cloudflare Pages) vs. Self-Hosted Web Servers:** While I wanted full control over the build pipeline via self-hosted Woodpecker, running a self-hosted web server just to serve static HTML was unnecessary drag. Pushing the compiled frontend to **Cloudflare Pages** gave me global CDN edge caching and zero runtime server maintenance.
-- **Pure Documentation vs. Narrative Storytelling:** Standard documentation layouts work well for tactical guides, but they don't showcase strategic impact. Expanding the site's information architecture to separate **guides/docs** from **engineering write-ups and case studies** gave peers and engineering leaders clear, dedicated paths to explore my work.
+The middleware bridge solution required a balance on developer ergonomics/velocity, runtime footprint, and maintainability:
+
+- **FastAPI vs. Heavyweight Frameworks:** While the original community project proved the concept using Django and Celery, a full-stack framework with an ORM, admin panel, and heavy boilerplate is overkill for a stateless API proxy. Moving to **FastAPI** drastically reduced memory overhead, improved async I/O performance for cloud polling, and provided automatic OpenAPI/Swagger documentation out of the box.
+- **Cloud Polling vs. Hardware Hacking:** Rather than voiding warranties by tapping directly into local RS485/Modbus serial ports, wrapping the upstream Auxsol Cloud endpoints (eu.auxsolcloud.com/auxsol-api) offered a safe, non-invasive integration path that works out of the box for any Auxsol owner.
+- **Read-Only Telemetry vs. Active Control:** Exposing passive metrics is straightforward, but true energy optimization requires write access. I prioritized exposing **Time-of-Use (ToU) control endpoints** alongside telemetry so Home Assistant automations can dynamically adjust charging/discharging windows rather than just passively logging data.
+- **Git-Native API Testing (Bruno) vs. Manual Verification:** Because upstream vendor APIs can change without notice, relying on manual checks is risky—especially when write endpoints modify inverter schedules. Instead of bloated GUI clients, I used **Bruno** (a plain-text, Git-friendly API test suite) to automate end-to-end contract verification before and after every deployment.
 
 # Execution
 
-Rather than abandoning my Markdown habit for a traditional blogging platform, I wrapped my existing notes repository in a full software delivery lifecycle:
+I built the service on modern Python tooling (**Python 3.13+** and **`uv`**) to ensure fast dependency resolution and reproducible deployments:
 
-- **Public/Private Vault Partitioning:** Divided my personal Markdown knowledge base into strict public and private boundaries—keeping rough scratchpads, credentials, and proprietary work notes private while flagging polished guides for public release.
-- **Automated Note Publishing via Self-Hosted Woodpecker CI/CD:** Configured a **self-hosted Woodpecker CI/CD** pipeline triggered on Git commits to automatically extract the public note subset, compile the **Docusaurus** frontend, verify broken links/builds, and push artifacts directly to production.
-- **Zero-Server Edge Delivery on Cloudflare Pages:** Deployed the compiled static frontend to **Cloudflare Pages**, decoupling my self-hosted build infrastructure from globally distributed, zero-maintenance public serving.
-- **Multi-Format Content Architecture:** Evolved the site beyond reference documentation to house dedicated sections for **engineering write-ups** and **non-technical case studies** (including the page you are reading right now), turning daily engineering work into visible proof of craft.
+- **Stateless API Proxy Layer:** Engineered clean REST endpoints in FastAPI to handle authentication against the Auxsol Cloud API, translating proprietary upstream payloads into structured JSON ready for Home Assistant REST sensors and automations.
+- **Telemetry & Time-Series Endpoints:** Exposed granular endpoints for real-time inverter status (live generation, load, battery state), historical time-series production analytics, and detailed inverter reports.
+- **Time-of-Use (ToU) Control Exposure:** Surfaced inverter configuration endpoints to allow programmatic control over Time-of-Use schedules, enabling automated peak-shaving and tariff-based battery rules directly from Home Assistant.
+- **Two-Stage Automated API Testing (Bruno):** Built a version-controlled **Bruno** test collection covering every endpoint:
+    - **Pre-Deployment Gate:** Spins up an ephemeral, isolated test environment to run the full Bruno suite against every route, catching regressions or upstream schema shifts before code ever ships.
+    - **Post-Deployment Verification:** Executes automated smoke tests against the live deployed container to verify production health, authentication, and network connectivity immediately after release.
+- **Zero-Friction Containerization:** Packaged the application with Docker and Docker Compose using environment-driven configuration (`.env` for credentials, serial numbers, and regional API base URLs), allowing other self-hosters to spin up the bridge in seconds.
 
-# Impact
+# Outcome
 
-- **Zero-Friction "Commit-to-Publish" Workflow:** Turned personal note-taking into an automated publishing engine—committing a Markdown note triggers Woodpecker CI to build and deploy straight to Cloudflare's edge with zero manual file juggling.
-- **Safe Public/Private Isolation:** Maintained strict separation between private working notes and public content inside a single, cohesive workflow without risking accidental data exposure.
-- **Controlled Builds, Zero-Maintenance Serving:** Paired full pipeline customization on self-hosted Woodpecker with fast, globally cached frontend delivery on Cloudflare Pages.
-- **Scalable Visibility & Personal Brand:** Transformed years of behind-the-scenes engineering notes into a structured, searchable portfolio of guides, engineering write-ups, and case studies.
+- **Full Home Assistant Integration:** Successfully liberated proprietary solar data into a local smart-home ecosystem, enabling unified energy monitoring and automated Time-of-Use battery orchestration.
+- **Lightweight Self-Hosted Footprint:** Replaced heavyweight framework overhead with a lean, asynchronous Python 3.13 + FastAPI service managed via `uv` and Docker.
+- **Open-Source Contribution:** Released the project as free, open-source software with a streamlined Quick Start setup, giving other Auxsol inverter owners a drop-in solution to reclaim control over their solar hardware.
