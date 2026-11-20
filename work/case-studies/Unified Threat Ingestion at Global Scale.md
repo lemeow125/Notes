@@ -12,7 +12,8 @@ While the core system existed, it needed to both handle massive alert volumes an
 
 As Lead Python Developer for Platform ARM, I stepped into an active environment to scale the core ingestion engine and roll out net-new threat intelligence capabilities, supporting over 50 million annual alerts across 2,000+ enterprise customers.
 
-# The Trade-Offs
+
+## The Trade-Offs
 
 Evolving a live, mission-critical security platform comes with two major risks: if you move too aggressively to integrate new vendor products and data formats, you risk breaking existing customer pipelines or exposing sensitive data (PII) in a shared environment.
 
@@ -20,7 +21,7 @@ On the flip side, playing it too safe—or failing to ingest new threat signals 
 
 Instead of rebuilding from scratch or letting legacy constraints slow innovation, I focused on **modernizing the existing pipelines with elastic cloud capacity and modular integrations** while establishing **strict governance, monitoring, and team standards**—allowing us to rapidly ship new threat intelligence capabilities on top of a rock-solid foundation.
 
-# Execution
+## Execution
 
 Over 21 months, I took ownership of the core ingestion domain to both scale existing operations and roll out new threat-detection capabilities:
 
@@ -29,7 +30,7 @@ Over 21 months, I took ownership of the core ingestion domain to both scale exis
 - **Governance, Observability & Standards:** Partnered with security governance to enforce strict PII handling and Python standards, while implementing real-time health monitoring (Splunk and Azure alerting) and automated deployment pipelines so new integrations could ship safely.
 - **Cross-Team Crisis Leadership:** Served as the central point of contact during a critical alert ingestion outage, coordinating 40+ engineers and security stakeholders across 4+ teams over a weekend to restore full visibility without data loss.
 
-# Outcome
+## Outcome
 
 - **Future-Proofed Threat Visibility:** Expanded platform coverage beyond standard alerts by rolling out ingestion for next-generation vendor modules, IoCs, and standardized STIX threat feeds—empowering analysts to correlate and catch emerging threats faster.
 - **Brownfield-to-Scale Evolution:** Successfully scaled an existing live platform to reliably process 50M+ annual security alerts across 20+ vendor ecosystems for 2,000+ global enterprise clients.

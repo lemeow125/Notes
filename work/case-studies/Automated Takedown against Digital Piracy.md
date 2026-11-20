@@ -12,7 +12,7 @@ At the time (2024), fighting piracy was a slow, manual grind—staff had to hunt
 
 Leadership wanted to spin up a standalone product (**SimpleDMCA**) to automate this process and sell it as a subscription service, but needed to go from zero to a reliable, revenue-generating platform in five months.
 
-# The Trade-Offs
+## The Trade-Offs
 
 Full automation in copyright enforcement is risky: if a system blindly fires off takedown notices without verification, it creates legal headaches and damages client trust. 
 
@@ -20,7 +20,7 @@ On the flip side, paying for massive, always-on server capacity to constantly sc
 
 Instead of choosing between slow manual labor or reckless full automation, I designed a **human-in-the-loop workflow** paired with **pay-as-you-go cloud capacity**—automating the heavy lifting while keeping a human checkpoint before anything critical goes out.
 
-# Execution
+## Execution
 
 
 In five months, I architected and launched the core platform from the ground up:
@@ -30,7 +30,7 @@ In five months, I architected and launched the core platform from the ground up:
 - **Commercial & Billing Readiness:** Integrated subscription billing (Stripe) and automated deployment pipelines so new features could ship safely without breaking live customer scans.
 - **Elastic Cost Control:** Configured the underlying cloud infrastructure to automatically scale up during heavy scanning bursts and scale down to near-zero when idle, keeping operating costs tightly tied to actual customer demand.
 
-# Outcome
+## Outcome
 - **0-to-1 Commercial Spin-Out:** Took an internal operational bottleneck and delivered a revenue-ready SaaS product—from core platform to subscription billing—in just 5 months.
 - **Cross-Entity Leverage:** Tapped into existing parent and sibling agency workflows, turning established internal processes and an immediate creator client base into a built-in launchpad instead of building in a vacuum.
 - **Human-in-the-Loop Precision:** Automated repetitive link-hunting, evidence logging, and follow-up tracking while preserving a 100% human verification gate on final takedowns.
