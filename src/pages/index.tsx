@@ -36,7 +36,7 @@ const PILLARS: PillarItem[] = [
     tag: "Docs",
     description:
       "Command snippets, configuration templates.",
-    link: "/docs/Docs",
+    link: "/docs",
     cta: "Browse Docs →",
   },
 ];
