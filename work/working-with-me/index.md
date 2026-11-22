@@ -39,7 +39,7 @@ If it turns out I'm the right person to build the thing, we talk about that next
 
 # Work
 
-I'm your average Joe when it comes to schedules—available Monday through Friday, no weird 3 AM emergency-only retainers required.
+I'm your average Joe when it comes to schedules—available Monday through Friday, 3 AM on-call rotations only when necessary.
 
 - **Timezone flexibility.** Based in the Philippines, and I regularly align with UK, EU, and PH working hours without a hitch. Whether we need live overlap for pairing and triage or async handoffs, we'll make the clock work.
 - **Pacing that fits the problem.** I don't only do massive, full-time builds. If you need steady, smaller-scale progress—a few hours a week, a focused audit, or fractional help—we can negotiate a cadence that makes sense for your budget and backlog.
