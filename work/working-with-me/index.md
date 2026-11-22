@@ -34,7 +34,9 @@ If it turns out I'm the right person to build the thing, we talk about that next
 
 - **Not an agency**. I put quality in work, a small number of things at a time.
 
-- **Small-scale paid work**. If you're a student or a junior, I will instead advise free-of-charge and give you direction. I will not build what you can learn out of.
+- **Student Coding Work**. If you're a student or a junior, I will instead advise free-of-charge and give you direction. I will not build what you can learn out of.
+
+- **Extremely Small-Scale Work**. If you just need a quick, one-off script—like "write us a web scraper in 3 days"—you're beyond my scope for the wrong reasons. I can do it easily, but you're much better off using AI for that and saving your budget for problems that actually need an engineer.
 
 
 # Work
