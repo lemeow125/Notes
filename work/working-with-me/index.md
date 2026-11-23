@@ -11,7 +11,7 @@ I'm a generalist by trade. Hand me a problem that doesn't have a clean owner yet
 
 You describe the problem. I ask questions until the shape of it is clear.
 
-Our first conversation is the whole pitch. If clarity is enough for you to solve it yourself, take it and go — that's success for me.
+One conversation, about an hour, no charge. If clarity is enough for you to solve it yourself, take it and go — that's success for me.
 
 If you walk away knowing more about your own system than you did an hour ago, the conversation did its job. I'd rather that than talk you into work you didn't need.
 
