@@ -31,8 +31,7 @@ I work the cracks. Hand me what nobody has time for and it stops being nobody's.
 
 - **Breadth is what makes depth cheap.** Point me at a scope and I'll go the whole way down. Four systems, four domains, no shared stack — the patterns transfer when the tooling doesn't. A quarter to own the unfamiliar, and documentation left behind instead of dependence.
 
-- **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people. I am amiable get the work done, and am a team player, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
-
+- **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations)
 - **Cybersecurity pipelines that can't drop data**. Multi-tenant ingestion at scale, provider API integrations, retries, backpressure, cost control. I've run one that ingested tens of millions of security alerts a year from twenty-plus EDR/MDR vendors.
 
 - **Incident Triage**. I've been the point of contact on a cross-team ingestion failure spanning four teams on-call. I know what that weekend feels like and what to do during it.
