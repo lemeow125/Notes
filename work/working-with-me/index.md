@@ -17,12 +17,21 @@ If you walk away knowing more about your own system than you did an hour ago, th
 
 If it turns out I'm the right person to build the thing, we talk about that next. If I'm not, I'll tell you and point at what I'd look for instead.
 
+# If I hire you, what will you actually own?
+The practices. Documentation that matches the system, coding standards people actually follow, runbooks someone has read this year, the ten minutes of unblocking someone at 4pm.
+
+Someone already owns the platform? Good. That's a division of labor, not a problem.
+
+I work the cracks. Hand me what nobody has time for and it stops being nobody's.
+
 
 # What I'm actually good at
 
 - **Making a messy system legible**. Monitoring, alerting, runbooks, documentation — the boring work that means the next person doesn't have to reverse-engineer your platform from logs.
 
-- **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people. I am amiable, get the work done, and am a team player, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
+- **Picking up a scope faster than it should be possible.** At Kroll I was handed a 50M alerts/year multi-tenant pipeline and owned it — architecture, docs, deployment — inside a quarter. At SimpleDMCA I was handed the platform alongside the backend and did the same in five months.
+
+- **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people. I am amiable get the work done, and am a team player, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
 
 - **Cybersecurity pipelines that can't drop data**. Multi-tenant ingestion at scale, provider API integrations, retries, backpressure, cost control. I've run one that ingested tens of millions of security alerts a year from twenty-plus EDR/MDR vendors.
 
@@ -39,7 +48,7 @@ If it turns out I'm the right person to build the thing, we talk about that next
 
 - **Student Coding Work**. If you're a student or a junior, I will instead advise free-of-charge and give you direction. I will not build what you can learn out of.
 
-- **Extremely Small-Scale Work**. If you just need a quick, one-off script—like "write us a web scraper in 3 days"—that's not where my time adds value. I can do it easily, but you're much better off using AI for that and saving your budget for problems that actually need an engineer.
+- **Extremely Small-Scale Work**. If you just need a quick, one-off script—like "write us a web scraper in 3 days"—that's not where my time adds value. You're much better off using AI for that and saving your budget for problems that actually need an engineer.
 
 
 # Work
