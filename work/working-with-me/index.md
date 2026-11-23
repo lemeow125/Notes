@@ -22,13 +22,16 @@ If it turns out I'm the right person to build the thing, we talk about that next
 
 - **Making a messy system legible**. Monitoring, alerting, runbooks, documentation — the boring work that means the next person doesn't have to reverse-engineer your platform from logs.
 
-- **Cybersecurity pipelines that can't drop data**. Multi-tenant ingestion at scale, provider API integrations, retries, backpressure, cost control. I've run one that ingested tens of millions of security alerts a year from twenty-plus EDR/MDR vendors.
+- **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people. I am amiable, get the work done, and am a team player, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
 
-- **Azure & on-prem platforms**. Function Apps, Container Apps, docker compose, CI/CD that people trust enough to deploy on a Friday, regardless of your size.
+- **Cybersecurity pipelines that can't drop data**. Multi-tenant ingestion at scale, provider API integrations, retries, backpressure, cost control. I've run one that ingested tens of millions of security alerts a year from twenty-plus EDR/MDR vendors.
 
 - **Incident Triage**. I've been the point of contact on a cross-team ingestion failure spanning four teams on-call. I know what that weekend feels like and what to do during it.
 
-- **Being the person people ask**. Across every team I've been on, the pattern is the same: I end up as the one others come to when they don't know who to ask. I am amiable and get the work done, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
+- **Azure & on-prem platforms**. Function Apps, Container Apps, docker compose, CI/CD that people trust enough to deploy on a Friday, regardless of your size.
+
+
+
 
 # What I'm not
 
