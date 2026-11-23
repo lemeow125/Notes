@@ -16,6 +16,14 @@ type PillarItem = {
 
 const PILLARS: PillarItem[] = [
   {
+    title: "Articles",
+    tag: "Articles",
+    description:
+      "Pain points, lessons learned, know-how distilled.",
+    link: "/articles",
+    cta: "Read Articles →",
+  },
+  {
     title: "Case Studies",
     tag: "Work",
     description:
@@ -30,14 +38,6 @@ const PILLARS: PillarItem[] = [
       "System deep-dives, things built, and lessons learned in writing code.",
     link: "/work/engineering-writeups",
     cta: "Explore Writeups →",
-  },
-  {
-    title: "Docs",
-    tag: "Docs",
-    description:
-      "Command snippets, configuration templates.",
-    link: "/docs",
-    cta: "Browse Docs →",
   },
 ];
 
