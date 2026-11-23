@@ -29,7 +29,7 @@ I work the cracks. Hand me what nobody has time for and it stops being nobody's.
 
 - **Making a messy system legible**. Monitoring, alerting, runbooks, documentation — the boring work that means the next person doesn't have to reverse-engineer your platform from logs.
 
-- **Picking up a scope faster than it should be possible.** At Kroll I was handed a 50M alerts/year multi-tenant pipeline and owned it — architecture, docs, deployment — inside a quarter. At SimpleDMCA I was handed the platform alongside the backend and did the same in five months.
+- **Breadth is what makes depth cheap.** Point me at a scope and I'll go the whole way down. Four systems, four domains, no shared stack — the patterns transfer when the tooling doesn't. A quarter to own the unfamiliar, and documentation left behind instead of dependence.
 
 - **Being the person people want to work with**. Across every team I've been on, the pattern is the same: I end up as the one that empowers people. I am amiable get the work done, and am a team player, it's just what the references say [unprompted](https://www.linkedin.com/in/keannu-christian-bernasol-843464265/details/recommendations).
 
@@ -39,9 +39,6 @@ I work the cracks. Hand me what nobody has time for and it stops being nobody's.
 
 - **Azure & on-prem platforms**. Function Apps, Container Apps, docker compose, CI/CD that people trust enough to deploy on a Friday, regardless of your size.
 
-
-
-
 # What I'm not
 
 - **Not an agency**. I put quality in work, a small number of things at a time.
@@ -49,7 +46,6 @@ I work the cracks. Hand me what nobody has time for and it stops being nobody's.
 - **Student Coding Work**. If you're a student or a junior, I will instead advise free-of-charge and give you direction. I will not build what you can learn out of.
 
 - **Extremely Small-Scale Work**. If you just need a quick, one-off script—like "write us a web scraper in 3 days"—that's not where my time adds value. You're much better off using AI for that and saving your budget for problems that actually need an engineer.
-
 
 # Work
 
