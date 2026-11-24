@@ -1,3 +1,7 @@
+---
+title: "I'm not your friend, I'm your vendor"
+slug: /im-not-your-friend-im-your-vendor
+---
 
 Work is a transaction. It isn't charity, and it isn't a crime.
 

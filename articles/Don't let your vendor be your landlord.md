@@ -1,3 +1,8 @@
+---
+title: "Don't let your vendor be your landlord"
+slug: /dont-let-your-vendor-be-your-landlord
+---
+
 A landlord holds the keys. The lease is worthless if you can't get in the door.
 
 Four things should be in your company's name _before_ anyone writes code — not after.

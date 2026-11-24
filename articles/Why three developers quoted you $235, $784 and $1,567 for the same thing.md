@@ -1,3 +1,7 @@
+---
+title: "Why three developers quoted you $235, $784, and $1567 for the same thing"
+slug: /why-three-developers-quoted-you-x-y-z
+---
 
 They never quoted you the same thing.
 
